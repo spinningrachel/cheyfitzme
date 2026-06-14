@@ -1,0 +1,472 @@
+/* cheyfitz.me — Global Styles
+   Combines tokens.css + fonts.css from the design handoff,
+   with font paths rewritten for Astro's public/ directory. */
+
+/* ============================================================
+   @FONT-FACE — self-hosted, zero CDN
+   ============================================================ */
+
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('/fonts/BioRhyme-VariableFont_wdth_wght.ttf') format('truetype-variations'),
+       url('/fonts/BioRhyme-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-stretch: 100% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('/fonts/BioRhyme-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('/fonts/BioRhyme-ExtraBold.ttf') format('truetype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('/fonts/BioRhyme-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('/fonts/BioRhyme-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme';
+  src: url('/fonts/BioRhyme-SemiBold.ttf') format('truetype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme Expanded';
+  src: url('/fonts/BioRhymeExpanded-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme Expanded';
+  src: url('/fonts/BioRhymeExpanded-Light.ttf') format('truetype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme Expanded';
+  src: url('/fonts/BioRhymeExpanded-ExtraLight.ttf') format('truetype');
+  font-weight: 200; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme Expanded';
+  src: url('/fonts/BioRhymeExpanded-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'BioRhyme Expanded';
+  src: url('/fonts/BioRhymeExpanded-ExtraBold.ttf') format('truetype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/fonts/SchibstedGrotesk-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Schibsted Grotesk';
+  src: url('/fonts/SchibstedGrotesk-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ============================================================
+   COLOR TOKENS
+   ============================================================ */
+:root {
+  /* Brand core */
+  --c-purple-royal:    #5A00A3;
+  --c-purple-deep:     #40006D;
+  --c-purple-ink:      #2A0048;
+  --c-pink-hot:        #FF009F;
+  --c-pink-blush:      #FFD7DD;
+  --c-green-voltage:   #73E800;
+  --c-green-ink:       #0E2300;
+  --c-magenta:         #CB00B4;
+  --c-lilac-paper:     #F6F1FF;
+  --c-ice-paper:       #E6F5FF;
+  --c-ice-ink:         #001833;
+  --c-cyan-electric:   #28B7FF;
+  --c-lemon:           #E0E100;
+  --c-lemon-ink:       #1a1a00;
+  --c-white:           #FFFFFF;
+
+  /* Shade scales */
+  --c-purple-10:  #f0e6ff;
+  --c-purple-25:  #d4b0ff;
+  --c-purple-50:  #ad66f0;
+  --c-purple-75:  #7a1fd4;
+  --c-pink-10:    #ffe6f6;
+  --c-pink-25:    #ffb3e6;
+  --c-pink-50:    #ff66c7;
+  --c-pink-75:    #ff1fab;
+  --c-green-10:   #f0ffe0;
+  --c-green-25:   #c8f580;
+  --c-green-50:   #9dee40;
+  --c-green-75:   #82f000;
+  --c-lemon-10:   #faffd6;
+  --c-lemon-25:   #f2ff80;
+  --c-lemon-50:   #eaec40;
+  --c-lemon-75:   #b8b900;
+  --c-cyan-10:      #e6f7ff;
+  --c-cyan-25:      #b3e5ff;
+  --c-cyan-50:      #66ccff;
+  --c-cyan-75:      #3dbfff;
+  --c-cyan-deep:    #0090d4;
+  --c-cyan-ink:     #001833;
+  --c-ice-mid:      #c8e8ff;
+  --c-ice-ink-soft: #1a3a5c;
+
+  /* Plain neutrals */
+  --c-ink:        #1c0033;
+  --c-body:       #5a4a70;
+  --c-muted:      #8a7fa0;
+  --c-muted-soft: #9a8fb0;
+  --c-faint:      #b3a8c8;
+  --c-hairline:   #e8e2f0;
+  --c-hairline-soft: #efeaf4;
+  --c-paper:      #FAF9FC;
+  --c-surface:    #F4F1F9;
+
+  /* Gradients */
+  --grad-twilight:      linear-gradient(135deg, #40006D 0%, #5A00A3 45%, #CB00B4 100%);
+  --grad-purple-depth:  linear-gradient(180deg, #5A00A3 0%, #2A0048 100%);
+  --grad-voltage-surge: linear-gradient(135deg, #5A00A3 0%, #CB00B4 100%);
+  --grad-lilac-glow:    linear-gradient(180deg, #F6F1FF 0%, #ecdeff 100%);
+  --grad-ice-depth:     linear-gradient(180deg, #E6F5FF 0%, #c8e8ff 100%);
+  --glow-pink-dark:     radial-gradient(ellipse at center, rgba(255,0,159,0.18) 0%, transparent 70%);
+  --glow-green-dark:    radial-gradient(ellipse at center, rgba(115,232,0,0.15) 0%, transparent 70%);
+  --glow-purple-dark:   radial-gradient(ellipse at center, rgba(203,0,180,0.2) 0%, transparent 70%);
+  --glow-cyan-dark:     radial-gradient(ellipse at center, rgba(40,183,255,0.18) 0%, transparent 70%);
+  --glow-lemon-dark:    radial-gradient(ellipse at center, rgba(224,225,0,0.15) 0%, transparent 70%);
+
+  /* Type families */
+  --font-display:  'Schibsted Grotesk', system-ui, sans-serif;
+  --font-heading:  'Schibsted Grotesk', system-ui, sans-serif;
+  --font-body:     'Schibsted Grotesk', system-ui, sans-serif;
+  --font-accent:   'BioRhyme Expanded', 'BioRhyme', Georgia, serif;
+  --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+
+  /* Type scale — desktop */
+  --fs-hero:    72px;
+  --fs-h1:      56px;
+  --fs-h2:      40px;
+  --fs-h3:      24px;
+  --fs-h4:      18px;
+  --fs-lede:    20px;
+  --fs-body:    16px;
+  --fs-small:   14px;
+  --fs-micro:   12px;
+
+  /* Line heights */
+  --lh-tight:   0.95;
+  --lh-snug:    1.1;
+  --lh-display: 1.05;
+  --lh-heading: 1.25;
+  --lh-body:    1.6;
+
+  /* Letter spacing */
+  --ls-display: -3px;
+  --ls-h1:      -2px;
+  --ls-h2:      -1.5px;
+  --ls-h3:      -0.6px;
+  --ls-body:    0;
+  --ls-button:  0.2px;
+
+  /* Layout */
+  --max-width:     1280px;
+  --doc-width:     1080px;
+  --content-width: 720px;
+  --pad-section:   clamp(20px, 5vw, 72px);
+  --pad-page:      clamp(20px, 4vw, 56px);
+}
+
+/* Mobile scale-down */
+@media (max-width: 640px) {
+  :root {
+    --fs-hero: 48px;
+    --fs-h1:   40px;
+    --fs-h2:   30px;
+    --fs-h3:   20px;
+  }
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--c-green-voltage);
+  color: var(--c-green-ink);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+html { font-size: 100%; }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-body);
+  color: var(--c-ink);
+  background: var(--c-white);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ============================================================
+   TYPE CLASSES (from fonts.css spec)
+   ============================================================ */
+h1, .t-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-h1);
+  font-weight: 800;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h1);
+  text-wrap: balance;
+}
+
+h2, .t-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-h2);
+  text-wrap: balance;
+}
+
+h3, .t-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-h3);
+}
+
+h4, .t-h4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.1px;
+}
+
+p { text-wrap: pretty; }
+
+.t-lede {
+  font-family: var(--font-body);
+  font-size: var(--fs-lede);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.1px;
+  text-wrap: pretty;
+}
+
+/* Eyebrow / label — BioRhyme UPPERCASE in a signal color.
+   Serif eyebrow + sans headline = intentional inversion. */
+.t-eyebrow, .t-label {
+  font-family: 'BioRhyme', Georgia, serif;
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Section marker numeral — BioRhyme. Size set per context, never hardcoded globally. */
+.t-marker {
+  font-family: 'BioRhyme', Georgia, serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* Rare decorative display accent */
+.t-display-accent {
+  font-family: var(--font-accent);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -2px;
+}
+
+.t-quote-mark {
+  font-family: var(--font-accent);
+  font-weight: 800;
+  line-height: 0.5;
+}
+
+.t-button, button {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: var(--ls-button);
+  line-height: 1;
+}
+
+.t-nav {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.t-quote {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+code, .t-code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  font-weight: 500;
+  background: rgba(90, 0, 163, 0.06);
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+pre, pre code {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  background: #faf8f3;
+  padding: 16px 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* JetBrains Mono: functional use only — timestamps, routes, status labels, metadata */
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Utilities */
+.t-balance  { text-wrap: balance; }
+.t-pretty   { text-wrap: pretty; }
+.t-italic   { font-style: italic; }
+.t-small    { font-size: var(--fs-small); line-height: 1.5; }
+.t-micro    { font-size: var(--fs-micro); line-height: 1.45; }
+
+/* Highlight marks */
+.hl-pink   { background: linear-gradient(transparent 60%, var(--c-pink-hot) 60%); padding: 0 4px; }
+.hl-green  { background: linear-gradient(transparent 60%, var(--c-green-voltage) 60%); padding: 0 4px; }
+.hl-lemon  { background: linear-gradient(transparent 60%, var(--c-lemon) 60%); padding: 0 4px; }
+
+/* ============================================================
+   LAYOUT SHELL
+   ============================================================ */
+.site-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--pad-page);
+}
+
+section {
+  padding: var(--pad-section) 0;
+}
+
+/* ============================================================
+   BUTTON PRIMITIVES
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: var(--ls-button);
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 9px;
+  padding: 14px 22px;
+  transition: opacity 0.15s ease;
+}
+.btn:hover { opacity: 0.88; }
+
+.btn-voltage {
+  background: var(--c-green-voltage);
+  color: var(--c-green-ink);
+  padding: 15px 28px;
+  font-size: 16px;
+  border-radius: 9px;
+}
+
+.btn-ink {
+  background: var(--c-purple-ink);
+  color: var(--c-white);
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.btn-text {
+  background: none;
+  color: var(--c-purple-ink);
+  font-weight: 600;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--c-green-voltage);
+  border-radius: 0;
+}
+
+/* ============================================================
+   HAIRLINE RULE UTILITY
+   ============================================================ */
+.rule-top    { border-top: 1px solid var(--c-hairline); }
+.rule-bottom { border-bottom: 1px solid var(--c-hairline); }

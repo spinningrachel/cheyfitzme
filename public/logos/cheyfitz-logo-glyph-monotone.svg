@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340" width="280" height="340" role="img" aria-label="cheyfitz logo — monotone">
+  <path d="M 90 240 C 70 220, 55 195, 55 160 C 55 100, 95 60, 140 60 C 185 60, 225 100, 225 160 C 225 195, 210 220, 190 240" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path>
+  <path d="M 175 130 C 175 105, 155 95, 140 95 C 115 95, 100 120, 100 150 C 100 180, 115 205, 140 205 C 155 205, 175 195, 175 170" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"></path>
+  <path d="M 95 256 Q 140 248 185 256" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path>
+  <path d="M 100 280 Q 140 272 180 280" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path>
+  <path d="M 110 302 Q 140 296 170 302" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"></path>
+</svg>

@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<Base title="PMM Playbook Blog" description="Insights on product marketing, positioning, technical writing, and more.">
+  <section class="blog-page">
+    <h1>PMM Playbook: The Blog</h1>
+    <p>Insights for all business professionals in tech.</p>
+    <ul class="post-list">
+      {posts.map(post => (
+        <li>
+          <a href={`/blog/${post.id}`}>
+            <h2>{post.data.title}</h2>
+            <time datetime={post.data.pubDate.toISOString()}>
+              {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </time>
+            <p>{post.data.description}</p>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

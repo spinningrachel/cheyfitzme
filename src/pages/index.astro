@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Marketing Strategist, Advisor and Mentor" description="From deep tech and dev tools to makeup and beard cream, I turn complex ideas into clear stories that bring your business to life.">
+
+  <section class="hero">
+    <h1>Marketing Strategist,<br />Advisor and Mentor</h1>
+    <p class="hero-body">
+      From beard cream and makeup to deep tech like cyber and dev tools, I turn complex ideas
+      into clear stories that bring your business to life—your vision, your voice.
+    </p>
+    <a href="/contact" class="cta-primary">Let's Meet</a>
+    <a href="/services" class="cta-secondary">How I Can Help</a>
+  </section>
+
+  <section class="pillars">
+    <h2>Why You Need Me</h2>
+    <div class="pillar-grid">
+      <div class="pillar"><h3>Data-Driven</h3><p>Leveraging analytics to define ICPs, refine personas, recommend lead qualification criteria and evaluate marketing strategy effectiveness.</p></div>
+      <div class="pillar"><h3>Knowledge Sharing at the Core</h3><p>Developing technical docs, developer portals and more to boost user engagement and self-service capabilities.</p></div>
+      <div class="pillar"><h3>Straightforward Marketing</h3><p>Crafting simple, effective marketing strategies that prioritize customer needs and reflect company values.</p></div>
+      <div class="pillar"><h3>Building Scalable Frameworks for Growth</h3><p>Scalable product marketing infrastructures for growing businesses, grounded in best practices, robust processes, and the right tools.</p></div>
+      <div class="pillar"><h3>Team Development & Leadership with Love</h3><p>Track record of building and scaling high-performing teams across multiple countries.</p></div>
+      <div class="pillar"><h3>Innovation-Driven</h3><p>Implementing effective business processes and fostering cross-functional collaboration to drive positive change.</p></div>
+      <div class="pillar"><h3>Global Market Expertise</h3><p>Extensive experience across global markets with demonstrated success in adapting strategies for diverse cultural contexts.</p></div>
+      <div class="pillar"><h3>Demand Gen/Growth Management</h3><p>Leading teams to execute successful campaigns that generate qualified leads and support sales pipeline growth.</p></div>
+      <div class="pillar"><h3>Technical Expertise</h3><p>Applying deep knowledge of AI solutions, anomaly detection, and cloud pricing to connect technical & business needs.</p></div>
+      <div class="pillar"><h3>Engaging Storytelling</h3><p>Simplifying complex ideas without losing their essence, and effectively promoting technical products to audiences like engineers, DevOps, and IT professionals.</p></div>
+      <div class="pillar"><h3>Broad Cross-Functional Collaboration</h3><p>Bridging product, finance, engineering, customer success, partner marketing, enablement, and revenue for alignment.</p></div>
+    </div>
+  </section>
+
+  <section class="services-overview">
+    <h2>How I Can Help You</h2>
+    <div class="services-grid">
+      {services.map(service => (
+        <div class="service-card">
+          <h3>{service.data.title}</h3>
+          <ul>
+            {service.data.items.map(item => <li>{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="clients">
+    <h2>Customers & Employers</h2>
+    <!-- Drop client logo files into /public/images/clients/ -->
+    <p class="clients-names">Cisco · Snyk · Cycode · BlinkOps · Pentera · Coro · Geotab · Surfsight</p>
+  </section>
+
+</Base>

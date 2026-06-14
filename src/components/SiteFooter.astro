@@ -1,0 +1,104 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <a href="/" class="site-footer__logo" aria-label="Rachel Cheyfitz — home">
+      <img
+        src="/logos/cheyfitz-logo-lockup-horizontal.svg"
+        alt="Rachel Cheyfitz"
+        height="24"
+        width="auto"
+        style="filter: brightness(0) invert(1);"
+      />
+    </a>
+
+    <div class="site-footer__actions">
+      <a
+        href="https://www.linkedin.com/in/rachelcheyfitz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="site-footer__icon-btn"
+        aria-label="LinkedIn"
+      >
+        <img src="/icons/linkedin.svg" alt="" width="18" height="18" aria-hidden="true" />
+      </a>
+
+      <a
+        href="mailto:rachel@cheyfitz.me"
+        class="site-footer__icon-btn"
+        aria-label="Email"
+      >
+        <img src="/icons/mail.svg" alt="" width="18" height="18" aria-hidden="true" />
+      </a>
+
+      <a
+        href="https://media.journoportfolio.com/users/422800/uploads/878dbc58-621f-4046-a6bf-f8c7147f6dfa.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="site-footer__cv-link"
+      >
+        Download CV
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--c-ink);
+    color: var(--c-white);
+    margin-top: auto;
+  }
+
+  .site-footer__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 40px var(--pad-page);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .site-footer__logo img {
+    height: 24px;
+    width: auto;
+  }
+
+  .site-footer__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .site-footer__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    transition: border-color 0.15s;
+  }
+  .site-footer__icon-btn:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  .site-footer__icon-btn img {
+    filter: brightness(0) invert(1);
+  }
+
+  .site-footer__cv-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 0 4px;
+    transition: color 0.15s;
+  }
+  .site-footer__cv-link:hover {
+    color: var(--c-white);
+  }
+</style>

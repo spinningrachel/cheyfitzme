@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const portfolio = (await getCollection('portfolio')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Portfolio" description="Work samples across cybersecurity, dev tools, telematics, recruitment, and more.">
+  <section class="portfolio-page">
+    <h1>Portfolio: Work Samples</h1>
+    <div class="portfolio-grid">
+      {portfolio.map(item => (
+        <a href={`/portfolio/${item.id}`} class="portfolio-card">
+          <p class="portfolio-category">{item.data.category}</p>
+          <h2>{item.data.title}</h2>
+          <p class="portfolio-client">{item.data.client}</p>
+          <p>{item.data.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+<Base title="Services" description="Product marketing, positioning, content, technical documentation, and campaign services.">
+  <section class="services-page">
+    <h1>How I Can Help You</h1>
+    <p>From beard cream and makeup to deep tech like cyber and dev tools, I turn complex ideas into clear stories that bring your business to life—your vision, your voice.</p>
+    {services.map(service => (
+      <div class="service-block">
+        <h2>{service.data.title}</h2>
+        <ul>
+          {service.data.items.map(item => <li>{item}</li>)}
+        </ul>
+      </div>
+    ))}
+  </section>
+</Base>
