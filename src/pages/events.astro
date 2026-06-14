@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Cool Events in Tel Aviv" description="Tel Aviv tech, product marketing, AI, and productivity events — curated and embedded from lu.ma.">
+
+  <section class="events-hero">
+    <div class="events-hero__inner">
+      <div class="t-label events-hero__eyebrow">Events</div>
+      <h1 class="events-hero__h1">Cool events in Tel Aviv.</h1>
+      <p class="events-hero__lede">Tel Aviv is buzzing with events that inspire, challenge, and connect. As someone deeply engaged in tech, product marketing, AI, and productivity tools, I constantly seek out the most interesting meetups, workshops, and conferences.</p>
+      <p class="events-hero__lede">This calendar is directly from lu.ma — many of the events are highly relevant to anyone in the startup, SaaS, and tech ecosystem. Browse and RSVP to upcoming events below.</p>
+    </div>
+  </section>
+
+  <section class="events-embed">
+    <div class="events-embed__inner">
+      <div class="events-embed__placeholder">
+        <span class="t-mono events-embed__label">embed · lu.ma</span>
+        <p class="events-embed__note">lu.ma calendar embed — drop iframe here when configured.</p>
+        <!-- <iframe src="https://lu.ma/embed/..." ... /> -->
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .events-hero {
+    padding: 88px var(--pad-page) 64px;
+    border-bottom: 1px solid var(--c-hairline-soft);
+  }
+
+  .events-hero__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  .events-hero__eyebrow {
+    color: var(--c-pink-hot);
+    margin-bottom: 20px;
+  }
+
+  .events-hero__h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--c-ink);
+    margin: 0 0 20px;
+  }
+
+  .events-hero__lede {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--c-body);
+    margin: 0 0 14px;
+  }
+
+  .events-embed {
+    padding: 64px var(--pad-page) 96px;
+  }
+
+  .events-embed__inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .events-embed__placeholder {
+    border: 1px dashed var(--c-hairline);
+    border-radius: 12px;
+    padding: 48px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .events-embed__label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--c-muted);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .events-embed__note {
+    font-size: 15px;
+    color: var(--c-body);
+    margin: 0;
+  }
+</style>

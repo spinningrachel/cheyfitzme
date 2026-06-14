@@ -1,20 +1,147 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getCollection } from 'astro:content';
-
-const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 ---
-<Base title="Services" description="Product marketing, positioning, content, technical documentation, and campaign services.">
-  <section class="services-page">
-    <h1>How I Can Help You</h1>
-    <p>From beard cream and makeup to deep tech like cyber and dev tools, I turn complex ideas into clear stories that bring your business to life—your vision, your voice.</p>
-    {services.map(service => (
-      <div class="service-block">
-        <h2>{service.data.title}</h2>
-        <ul>
-          {service.data.items.map(item => <li>{item}</li>)}
-        </ul>
-      </div>
-    ))}
+
+<Base
+  title="How I Can Help"
+  description="From positioning frameworks to technical documentation, GTM strategy to analyst relations — I build the marketing infrastructure that makes technically complex products buyable."
+>
+
+  <section class="page-hero">
+    <div class="inner">
+      <span class="t-label">Services</span>
+      <h1>How I Can Help</h1>
+      <p class="lede">From positioning frameworks to technical documentation, GTM strategy to analyst relations — I build the marketing infrastructure that makes technically complex products buyable.</p>
+    </div>
   </section>
+
+  <section class="content-section">
+    <div class="inner">
+      <h2>Product Marketing Core</h2>
+      <ul class="plain-list">
+        <li>Product Positioning &amp; Messaging</li>
+        <li>Go-to-Market Strategy Development</li>
+        <li>B2B SaaS Strategies</li>
+        <li>Market Research and Analysis</li>
+        <li>Pricing Strategies and Recommendations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="inner">
+      <h2>Marketing &amp; Docs Verticals</h2>
+      <ul class="plain-list">
+        <li>Cybersecurity</li>
+        <li>Dev Tools</li>
+        <li>Internal Communications</li>
+        <li>HR and Recruitment Platforms</li>
+        <li>B2C and Legal Productivity Apps</li>
+        <li>AI/ML-Driven Software</li>
+        <li>Compliance and Data Privacy Solutions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="inner">
+      <h2>Content &amp; Comms</h2>
+      <ul class="plain-list">
+        <li>Content strategy &amp; development</li>
+        <li>Thought leadership content</li>
+        <li>End-to-end content writing</li>
+        <li>Technical documentation (planning, infrastructure, resources, copyediting)</li>
+        <li>Developer hubs</li>
+        <li>In-app communications</li>
+        <li>PLG and retention strategies</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="inner">
+      <h2>Campaigns and Relations</h2>
+      <ul class="plain-list">
+        <li>Integrated marketing campaigns</li>
+        <li>Webinar planning and execution</li>
+        <li>Analyst relations management</li>
+        <li>Conference speaking</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section cta-section">
+    <div class="inner">
+      <a href="/lets-meet/" class="btn btn-ink">Let's talk</a>
+    </div>
+  </section>
+
 </Base>
+
+<style>
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--pad-page);
+  }
+
+  .page-hero {
+    padding: 88px 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+  }
+
+  .page-hero .t-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+  }
+
+  .lede {
+    font-size: 1.2rem;
+    color: var(--c-body);
+    max-width: 680px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .content-section {
+    padding: 88px 0;
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--c-ink);
+    margin: 0 0 2rem;
+  }
+
+  .plain-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .plain-list li {
+    color: var(--c-body);
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+    font-size: 0.95rem;
+  }
+
+  .plain-list li:first-child {
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .cta-section {
+    padding-top: 64px;
+    padding-bottom: 88px;
+  }
+</style>

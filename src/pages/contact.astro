@@ -1,17 +1,163 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Let's Meet" description="Let's meet, brainstorm, network, and maybe decide to work together.">
-  <section class="contact-page">
-    <h1>Let's Meet</h1>
-    <p>Let's take an opportunity to meet, learn about each other, brainstorm, network, drink coffee — and maybe decide to work together too. <strong>This meeting is at no charge.</strong></p>
 
-    <!-- Booking calendar embed goes here -->
+<Base
+  title="Let's Meet"
+  description="Let's take an opportunity to meet, learn about each other, brainstorm, network — and maybe decide to work together too."
+>
 
-    <ul class="contact-links">
-      <li><a href="mailto:rachel@cheyfitz.me">rachel@cheyfitz.me</a></li>
-      <li><a href="tel:+972509706244">+972-50-970-6244</a></li>
-      <li><a href="https://www.linkedin.com/in/rachelcheyfitz/" target="_blank" rel="noopener">LinkedIn</a></li>
-    </ul>
+  <section class="page-hero">
+    <div class="inner">
+      <span class="t-label">Contact</span>
+      <h1>Let's meet.</h1>
+      <p class="lede">Let's take an opportunity to meet, learn about each other, brainstorm, network, drink coffee — and maybe decide to work together too. This meeting is at no charge.</p>
+    </div>
   </section>
+
+  <section class="content-section">
+    <div class="inner narrow">
+
+      <div class="booking-embed">
+        <span class="t-mono embed-label">embed · cal.com</span>
+        <p>Booking calendar — drop Cal.com or Calendly iframe here.</p>
+      </div>
+
+      <div class="contact-details">
+        <h2>Get in touch</h2>
+
+        <div class="contact-row">
+          <span class="contact-row__label">Email</span>
+          <a href="mailto:rachel@cheyfitz.me" class="contact-row__value">rachel@cheyfitz.me</a>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-row__label">Phone</span>
+          <a href="tel:+972509706244" class="contact-row__value">+972-50-9706244</a>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-row__label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/rachelcheyfitz/" target="_blank" rel="noopener" class="contact-row__value">linkedin.com/in/rachelcheyfitz</a>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-row__label">Fiverr</span>
+          <a href="https://www.fiverr.com/rachelcheyfitz" target="_blank" rel="noopener" class="contact-row__value">fiverr.com/rachelcheyfitz</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
 </Base>
+
+<style>
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--pad-page);
+  }
+
+  .inner.narrow {
+    max-width: 640px;
+  }
+
+  .page-hero {
+    padding: 88px 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+  }
+
+  .page-hero .t-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.1;
+    margin: 0 0 1.5rem;
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    color: var(--c-body);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .content-section {
+    padding: 88px 0;
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .booking-embed {
+    border: 1px dashed var(--c-hairline);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .embed-label {
+    color: var(--c-muted);
+    font-size: 0.8rem;
+  }
+
+  .booking-embed p {
+    color: var(--c-muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .contact-details h2 {
+    font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+    font-weight: 700;
+    color: var(--c-ink);
+    margin: 0 0 1.5rem;
+  }
+
+  .contact-row {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+    align-items: baseline;
+  }
+
+  .contact-row:first-of-type {
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .contact-row__label {
+    font-size: 0.85rem;
+    color: var(--c-muted);
+    min-width: 80px;
+    flex-shrink: 0;
+  }
+
+  .contact-row__value {
+    font-size: 0.95rem;
+    color: var(--c-ink);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .contact-row__value:hover {
+    color: var(--c-purple-royal);
+  }
+
+  @media (max-width: 480px) {
+    .contact-row {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+  }
+</style>

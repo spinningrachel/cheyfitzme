@@ -1,27 +1,244 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Free Mentoring" description="Free mentoring for product marketers and technical writers.">
-  <section class="mentor-page">
-    <h1>I Mentor For Free!</h1>
-    <h2>Empowering Product Marketers & Technical Writers to Grow, Lead, and Succeed</h2>
-    <p>It can be hard to get meaningful support when you don't have the right title or network. This is my way of making that support a little easier to access. My mission is to help you elevate your skills.</p>
 
-    <h3>Together, we can:</h3>
-    <ul>
-      <li><strong>Clarify Complex Ideas</strong> – Simplify technical concepts for any audience.</li>
-      <li><strong>Strengthen Strategy</strong> – Build smarter go-to-market and content strategies.</li>
-      <li><strong>Refine Messaging</strong> – Craft clear, compelling narratives that resonate.</li>
-      <li><strong>Master Project Management</strong> – Plan, prioritize, and execute with precision.</li>
-      <li><strong>Choose the Right Tools, Workflows &amp; Processes</strong> – Select and implement to boost efficiency.</li>
-      <li><strong>Advance Your Career</strong> – Navigate role transitions and career growth.</li>
-    </ul>
+<Base
+  title="I Mentor For Free"
+  description="Free mentoring for product marketers and technical writers. Personalized guidance, practical tips, and actionable insights."
+  register="voltage"
+>
 
-    <p><strong>There is no time limit on quality mentoring. We start with one meeting, and take it from there.</strong></p>
-
-    <p>I genuinely love mentoring. It's not a side interest or a leadership checkbox—it's core to how I operate, both as a person and a professional. Supporting people as they grow into PMM or technical writing roles, build confidence, or rethink their path is something I care about deeply.</p>
-
-    <!-- Booking calendar embed goes here -->
-    <a href="/contact">Book a Free Session</a>
+  <section class="mentor-hero">
+    <div class="inner">
+      <span class="t-label">Mentoring</span>
+      <h1 class="mentor-hero__h1">I mentor for free.</h1>
+      <p class="mentor-hero__sub">Empowering product marketers &amp; technical writers to grow, lead, and succeed.</p>
+    </div>
   </section>
+
+  <section class="content-section intro-section">
+    <div class="inner">
+      <p class="intro-body">It can be hard to get meaningful support when you don't have the right title or network. This is my way of making that support a little easier to access. My mission is to help you elevate your skills. I'm here to provide personalized guidance, practical tips, and actionable insights to support you in your goals.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="inner">
+      <h2>Together, we can:</h2>
+      <div class="together-list">
+
+        <div class="together-item">
+          <div class="together-item__heading">Clarify Complex Ideas</div>
+          <div class="together-item__desc">Simplify technical concepts for any audience.</div>
+        </div>
+
+        <div class="together-item">
+          <div class="together-item__heading">Strengthen Strategy</div>
+          <div class="together-item__desc">Build smarter go-to-market and content strategies.</div>
+        </div>
+
+        <div class="together-item">
+          <div class="together-item__heading">Refine Messaging</div>
+          <div class="together-item__desc">Craft clear, compelling narratives that resonate.</div>
+        </div>
+
+        <div class="together-item">
+          <div class="together-item__heading">Master Project Management</div>
+          <div class="together-item__desc">Plan, prioritize, and execute with precision.</div>
+        </div>
+
+        <div class="together-item">
+          <div class="together-item__heading">Choose the Right Tools, Workflows &amp; Processes</div>
+          <div class="together-item__desc">Select and implement to boost efficiency.</div>
+        </div>
+
+        <div class="together-item">
+          <div class="together-item__heading">Advance Your Career</div>
+          <div class="together-item__desc">Navigate role transitions and career growth.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pull-quote-section">
+    <div class="inner">
+      <blockquote class="pull-quote">
+        There is no time limit on quality mentoring. We start with one meeting, and take it from there.
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="content-section about-section">
+    <div class="inner">
+      <h2>About my approach</h2>
+      <p class="about-body">I genuinely love mentoring. It's not a side interest or a leadership checkbox — it's core to how I operate, both as a person and a professional. Supporting people as they grow into PMM or technical writing roles, build confidence, or rethink their path is something I care about deeply, and it shows up in how I collaborate every day.</p>
+    </div>
+  </section>
+
+  <section class="content-section booking-section">
+    <div class="inner">
+      <h2>Book a session</h2>
+      <div class="booking-embed">
+        <span class="t-mono embed-label">embed · cal.com</span>
+        <p>Booking calendar — drop Cal.com iframe here.</p>
+      </div>
+      <div class="booking-cta">
+        <a href="/lets-meet/" class="btn btn-voltage">Book a free session</a>
+      </div>
+    </div>
+  </section>
+
 </Base>
+
+<style>
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--pad-page);
+  }
+
+  .mentor-hero {
+    background: var(--c-purple-ink);
+    padding: 96px 0 88px;
+  }
+
+  .mentor-hero .t-label {
+    display: block;
+    margin-bottom: 1.25rem;
+    color: var(--c-green-voltage);
+  }
+
+  .mentor-hero__h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    color: var(--c-white);
+    line-height: 1;
+    margin: 0 0 1.25rem;
+  }
+
+  .mentor-hero__sub {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    color: var(--c-faint);
+    margin: 0;
+    max-width: 600px;
+    line-height: 1.4;
+  }
+
+  .content-section {
+    padding: 88px 0;
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .intro-section {
+    border-top: none;
+    padding-top: 72px;
+  }
+
+  .intro-body {
+    font-size: 1.15rem;
+    color: var(--c-body);
+    max-width: 720px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .content-section h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--c-ink);
+    margin: 0 0 2rem;
+  }
+
+  .together-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .together-item {
+    display: flex;
+    gap: 2rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+    align-items: baseline;
+  }
+
+  .together-item:first-child {
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .together-item__heading {
+    font-weight: 700;
+    color: var(--c-ink);
+    font-size: 0.95rem;
+    min-width: 260px;
+    flex-shrink: 0;
+  }
+
+  .together-item__desc {
+    color: var(--c-body);
+    font-size: 0.95rem;
+  }
+
+  .pull-quote-section {
+    background: var(--c-purple-ink);
+    padding: 80px 0;
+  }
+
+  .pull-quote {
+    font-size: clamp(1.4rem, 3vw, 2.25rem);
+    font-weight: 700;
+    color: var(--c-green-voltage);
+    line-height: 1.3;
+    margin: 0;
+    max-width: 760px;
+    border: none;
+    padding: 0;
+  }
+
+  .about-section .about-body {
+    font-size: 1.1rem;
+    color: var(--c-body);
+    max-width: 680px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .booking-embed {
+    border: 1px dashed var(--c-hairline);
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .embed-label {
+    color: var(--c-muted);
+    font-size: 0.8rem;
+  }
+
+  .booking-embed p {
+    color: var(--c-muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .booking-cta {
+    display: flex;
+  }
+
+  @media (max-width: 640px) {
+    .together-item {
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .together-item__heading {
+      min-width: unset;
+    }
+  }
+</style>

@@ -7,6 +7,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://cheyfitz.com',
+  site: 'https://cheyfitz.me',
   integrations: [mdx(), sitemap()],
 });

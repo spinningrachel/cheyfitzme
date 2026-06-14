@@ -1,17 +1,135 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="About" description="Marketing, content & documentation consultant with 20+ years of experience.">
-  <section class="about">
-    <h1>About Rachel</h1>
-    <ul>
-      <li>Marketing, content &amp; documentation consultant</li>
-      <li>Expert in GTM strategy, messaging, and technical storytelling</li>
-      <li>Passionate about cyber, HR tech, dev tools, emerging tech &amp; more</li>
-      <li>Authentic leader successful in building high-performing teams</li>
-      <li>Thought leader, writer, and mentor</li>
-    </ul>
-    <p>With 20+ years of experience writing for companies like Cisco, Snyk, and Pentera, I help brands stand out in their market. My expertise spans writing for developers and executives, crafting docs, microcopy, blog posts, scripts, and more, consulting on content strategy, tools, and methodologies across multiple industries and verticals.</p>
-    <a href="https://app.enhancv.com/share/50e871a8/" target="_blank" rel="noopener">View Full CV</a>
+<Base title="About Rachel" description="Marketing, content & documentation consultant with 20+ years of experience.">
+  <section class="about-hero">
+    <div class="about-inner">
+      <p class="t-label eyebrow">Marketing strategist, advisor &amp; mentor</p>
+      <h1 class="display-headline">25 years of making complex products buyable.</h1>
+
+      <div class="bio-rows">
+        <div class="bio-row">Marketing, content &amp; documentation consultant</div>
+        <div class="bio-row">Expert in GTM strategy, messaging, and technical storytelling</div>
+        <div class="bio-row">Passionate about cyber, HR tech, dev tools, emerging tech &amp; more</div>
+        <div class="bio-row">Authentic leader successful in building high-performing teams</div>
+        <div class="bio-row last">Thought leader, writer, and mentor</div>
+      </div>
+
+      <p class="bio-body">With 20+ years of experience writing for companies like Cisco, Snyk, and Pentera, I help brands stand out in their market. My expertise spans writing for developers and executives, crafting docs, microcopy, blog posts, scripts, and more — consulting on content strategy, tools, and methodologies across multiple industries and verticals.</p>
+
+      <div class="cta-row">
+        <a href="https://app.enhancv.com/share/50e871a8/" target="_blank" rel="noopener" class="btn btn-ink">View Full CV</a>
+        <a href="/lets-meet/" class="btn btn-voltage">Let's meet</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="companies-section">
+    <div class="about-inner">
+      <p class="t-label companies-eyebrow">Customers &amp; employers</p>
+      <div class="logo-grid">
+        <div class="logo-slot" style="width:72px;"></div>
+        <div class="logo-slot" style="width:56px;"></div>
+        <div class="logo-slot" style="width:80px;"></div>
+        <div class="logo-slot" style="width:88px;"></div>
+        <div class="logo-slot" style="width:68px;"></div>
+        <div class="logo-slot" style="width:92px;"></div>
+        <div class="logo-slot" style="width:96px;"></div>
+        <div class="logo-slot" style="width:76px;"></div>
+      </div>
+      <p class="companies-names t-mono">Cisco · Snyk · Cycode · BlinkOps · Pentera · Coro · Geotab / Surfsight · Visual Layer</p>
+    </div>
   </section>
 </Base>
+
+<style>
+  .about-hero {
+    padding: 88px var(--pad-page) 64px;
+  }
+
+  .about-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    color: var(--c-pink-hot);
+    margin-bottom: 20px;
+  }
+
+  .display-headline {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 48px;
+    max-width: 680px;
+  }
+
+  .bio-rows {
+    border-top: 1px solid var(--c-hairline-soft);
+    margin-bottom: 40px;
+  }
+
+  .bio-row {
+    border-bottom: 1px solid var(--c-hairline-soft);
+    padding: 18px 0;
+    font-size: 17px;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    color: var(--c-body);
+    line-height: 1.5;
+  }
+
+  .bio-row.last {
+    border-bottom: none;
+  }
+
+  .bio-body {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 17px;
+    color: var(--c-body);
+    line-height: 1.7;
+    max-width: 620px;
+    margin: 0 0 40px;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .companies-section {
+    padding: 56px var(--pad-page) 80px;
+    border-top: 1px solid var(--c-hairline);
+  }
+
+  .companies-eyebrow {
+    color: var(--c-muted);
+    margin-bottom: 32px;
+  }
+
+  .logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px 40px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .logo-slot {
+    height: 18px;
+    background: var(--c-ink);
+    border-radius: 3px;
+    opacity: 0.55;
+  }
+
+  .companies-names {
+    font-size: 13px;
+    color: var(--c-muted);
+    letter-spacing: 0.02em;
+  }
+</style>
