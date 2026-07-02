@@ -1,0 +1,219 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="The PMM Stack"
+  description="Tools I actually use — reviewed honestly. The PMM and technical writing stack, built from 20+ years of figuring out what works."
+>
+
+  <section class="page-hero">
+    <div class="inner">
+      <a href="/marketing-resources/" class="back-link">← Marketing Resources</a>
+      <span class="t-label">The PMM Stack</span>
+      <h1>Tools I actually use.</h1>
+      <p class="lede">Reviewed honestly, from inside the work. Not sponsored, not comprehensive — just the tools I reach for and why. Updated as the stack evolves.</p>
+    </div>
+  </section>
+
+  <section class="stack-section">
+    <div class="inner">
+
+      <div class="stack-category">
+        <div class="stack-category__label t-label">Diagramming</div>
+        <div class="stack-tool">
+          <div class="stack-tool__head">
+            <h2 class="stack-tool__name">Napkin</h2>
+            <span class="stack-tool__verdict stack-tool__verdict--keep">Use it</span>
+          </div>
+          <p class="stack-tool__desc">Diagramming has always been my Achilles' heel, but Napkin makes it feel effortless. You just describe what's in your head — Napkin turns it into a clean, editable diagram. Ideal for technical writers, PMMs, and anyone who explains complex systems for a living. It's fast. It works. And it might just save you from another sad rectangle in Google Slides.</p>
+          <p class="stack-tool__best-for"><strong>Best for:</strong> System diagrams, process flows, explaining technical architecture to non-technical audiences.</p>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <div class="stack-category__label t-label">AI Notetakers</div>
+
+        <div class="stack-tool">
+          <div class="stack-tool__head">
+            <h2 class="stack-tool__name">Granola</h2>
+            <span class="stack-tool__verdict stack-tool__verdict--keep">Use it</span>
+          </div>
+          <p class="stack-tool__desc">My current go-to for discovery calls and internal syncs. Clean output, good at capturing decisions not just dialogue, and it doesn't require everyone to consent to a bot joining the call. The summaries are actually useful.</p>
+          <p class="stack-tool__best-for"><strong>Best for:</strong> Discovery calls, customer interviews, strategic syncs where you need the "what we decided" layer, not just the transcript.</p>
+        </div>
+
+        <div class="stack-tool">
+          <div class="stack-tool__head">
+            <h2 class="stack-tool__name">Fathom / Fireflies / Otter / Jamie</h2>
+            <span class="stack-tool__verdict stack-tool__verdict--neutral">Worth evaluating</span>
+          </div>
+          <p class="stack-tool__desc">All of these are credible. Fathom is strong for Zoom-native workflows. Fireflies has good team features. Otter is the veteran. Jamie is newer and promising. Which one works best depends heavily on your meeting platform and how your team collaborates on notes. Test before committing.</p>
+          <p class="stack-tool__best-for"><strong>Best for:</strong> Teams with heavy meeting loads, sales teams doing discovery at scale.</p>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <div class="stack-category__label t-label">Design &amp; Prototyping</div>
+        <div class="stack-tool">
+          <div class="stack-tool__head">
+            <h2 class="stack-tool__name">Figma Make</h2>
+            <span class="stack-tool__verdict stack-tool__verdict--keep">Use it</span>
+          </div>
+          <p class="stack-tool__desc">The AI layer inside Figma that generates UI components and mockups from text prompts. For PMMs who need to mock up a concept quickly without a designer available, this changes the speed at which you can make something look credible. Not a designer replacement — a translator between idea and visual.</p>
+          <p class="stack-tool__best-for"><strong>Best for:</strong> Rapid concept mockups, early-stage launch planning, communicating vision to engineering before designs are ready.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stack-footer">
+    <div class="inner">
+      <p class="stack-footer__note">This list is deliberately short. If a tool isn't here, it either didn't make the cut or I haven't evaluated it yet. Quality over comprehensiveness.</p>
+      <a href="/lets-meet/" class="btn btn-ink">Ask me about a specific tool</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--pad-page);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-muted-soft);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--c-ink); }
+
+  .page-hero {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--c-hairline-soft);
+  }
+
+  .page-hero .t-label {
+    display: block;
+    color: var(--c-green-voltage);
+    margin-bottom: 16px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin: 0 0 1.25rem;
+  }
+
+  .lede {
+    font-size: 18px;
+    color: var(--c-body);
+    max-width: 52ch;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .stack-section {
+    padding: 64px 0 0;
+  }
+
+  .stack-category {
+    border-top: 1px solid var(--c-hairline-soft);
+    padding: 48px 0;
+  }
+
+  .stack-category__label {
+    color: var(--c-muted);
+    margin-bottom: 28px;
+  }
+
+  .stack-tool {
+    padding: 28px 0;
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .stack-tool:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .stack-tool__head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  .stack-tool__name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--c-ink);
+    margin: 0;
+    letter-spacing: -0.3px;
+  }
+
+  .stack-tool__verdict {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+
+  .stack-tool__verdict--keep {
+    background: rgba(115, 232, 0, 0.12);
+    color: #3a6a00;
+  }
+
+  .stack-tool__verdict--neutral {
+    background: rgba(40, 183, 255, 0.1);
+    color: var(--c-cyan-deep);
+  }
+
+  .stack-tool__desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--c-body);
+    margin: 0 0 12px;
+    max-width: 66ch;
+  }
+
+  .stack-tool__best-for {
+    font-size: 14px;
+    color: var(--c-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .stack-tool__best-for strong {
+    color: var(--c-ink);
+    font-weight: 600;
+  }
+
+  .stack-footer {
+    padding: 56px 0 96px;
+    border-top: 1px solid var(--c-hairline-soft);
+    margin-top: 0;
+  }
+
+  .stack-footer__note {
+    font-size: 16px;
+    color: var(--c-muted);
+    max-width: 56ch;
+    line-height: 1.6;
+    margin: 0 0 32px;
+    font-style: italic;
+  }
+</style>

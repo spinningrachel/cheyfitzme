@@ -65,6 +65,38 @@
   src: url('/fonts/BioRhymeExpanded-ExtraBold.ttf') format('truetype');
   font-weight: 800; font-style: normal; font-display: swap;
 }
+/* Cabin — headings + UI */
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-Regular.ttf') format('truetype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-Medium.ttf') format('truetype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-SemiBold.ttf') format('truetype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-Bold.ttf') format('truetype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-Italic.ttf') format('truetype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('/fonts/Cabin-BoldItalic.ttf') format('truetype');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+
 @font-face {
   font-family: 'Schibsted Grotesk';
   src: url('/fonts/SchibstedGrotesk-VariableFont_wght.ttf') format('truetype');
@@ -159,16 +191,35 @@
   --grad-lilac-glow:    linear-gradient(180deg, #F6F1FF 0%, #ecdeff 100%);
   --grad-ice-depth:     linear-gradient(180deg, #E6F5FF 0%, #c8e8ff 100%);
   --glow-pink-dark:     radial-gradient(ellipse at center, rgba(255,0,159,0.18) 0%, transparent 70%);
+  --glow-pink-light:    radial-gradient(ellipse at center, rgba(255,0,159,0.07) 0%, transparent 65%);
   --glow-green-dark:    radial-gradient(ellipse at center, rgba(115,232,0,0.15) 0%, transparent 70%);
+  --glow-green-light:   radial-gradient(ellipse at center, rgba(115,232,0,0.08) 0%, transparent 65%);
   --glow-purple-dark:   radial-gradient(ellipse at center, rgba(203,0,180,0.2) 0%, transparent 70%);
   --glow-cyan-dark:     radial-gradient(ellipse at center, rgba(40,183,255,0.18) 0%, transparent 70%);
+  --glow-cyan-light:    radial-gradient(ellipse at center, rgba(40,183,255,0.08) 0%, transparent 65%);
   --glow-lemon-dark:    radial-gradient(ellipse at center, rgba(224,225,0,0.15) 0%, transparent 70%);
+  --glow-lemon-light:   radial-gradient(ellipse at center, rgba(224,225,0,0.07) 0%, transparent 65%);
+
+  /* Semantic aliases */
+  --fg-primary:    var(--c-purple-ink);
+  --fg-secondary:  var(--c-purple-royal);
+  --fg-muted:      rgba(42, 0, 72, 0.5);
+  --fg-inverse:    var(--c-white);
+  --bg-page:       var(--c-lilac-paper);
+  --bg-surface:    var(--c-white);
+  --bg-brand:      var(--c-purple-royal);
+
+  /* Service colors */
+  --c-strategy:    var(--c-purple-royal);
+  --c-frameworks:  var(--c-green-voltage);
+  --c-resources:   var(--c-cyan-electric);
 
   /* Type families */
-  --font-display:  'Schibsted Grotesk', system-ui, sans-serif;
-  --font-heading:  'Schibsted Grotesk', system-ui, sans-serif;
+  --font-display:  'Cabin', system-ui, sans-serif;
+  --font-heading:  'Cabin', system-ui, sans-serif;
   --font-body:     'Schibsted Grotesk', system-ui, sans-serif;
   --font-accent:   'BioRhyme Expanded', 'BioRhyme', Georgia, serif;
+  --font-eyebrow:  'BioRhyme', Georgia, serif;
   --font-mono:     'JetBrains Mono', 'Courier New', monospace;
 
   /* Type scale — desktop */
@@ -257,7 +308,7 @@ ul, ol { list-style: none; }
 h1, .t-h1 {
   font-family: var(--font-display);
   font-size: var(--fs-h1);
-  font-weight: 800;
+  font-weight: 700;
   line-height: var(--lh-display);
   letter-spacing: var(--ls-h1);
   text-wrap: balance;
@@ -266,7 +317,7 @@ h1, .t-h1 {
 h2, .t-h2 {
   font-family: var(--font-heading);
   font-size: var(--fs-h2);
-  font-weight: 800;
+  font-weight: 700;
   line-height: var(--lh-display);
   letter-spacing: var(--ls-h2);
   text-wrap: balance;
@@ -299,15 +350,27 @@ p { text-wrap: pretty; }
   text-wrap: pretty;
 }
 
-/* Eyebrow / label — BioRhyme UPPERCASE in a signal color.
-   Serif eyebrow + sans headline = intentional inversion. */
+/* Eyebrow — BioRhyme italic, sentence case, signal color, delicate not loud.
+   .t-label kept as alias. .t-tag stays mono+allcaps (UI element, not an eyebrow). */
 .t-eyebrow, .t-label {
-  font-family: 'BioRhyme', Georgia, serif;
-  font-size: var(--fs-micro);
-  font-weight: 600;
+  font-family: var(--font-eyebrow);
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
   line-height: 1.3;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.75;
+}
+
+/* Service chips / category pills — mono allcaps */
+.t-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
+  border-radius: 999px;
 }
 
 /* Section marker numeral — BioRhyme. Size set per context, never hardcoded globally. */
@@ -348,9 +411,9 @@ p { text-wrap: pretty; }
 }
 
 .t-quote {
-  font-family: var(--font-heading);
+  font-family: var(--font-eyebrow);
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 400;
   font-style: italic;
   line-height: 1.35;
   letter-spacing: -0.5px;
@@ -395,6 +458,40 @@ pre, pre code {
 .hl-pink   { background: linear-gradient(transparent 60%, var(--c-pink-hot) 60%); padding: 0 4px; }
 .hl-green  { background: linear-gradient(transparent 60%, var(--c-green-voltage) 60%); padding: 0 4px; }
 .hl-lemon  { background: linear-gradient(transparent 60%, var(--c-lemon) 60%); padding: 0 4px; }
+.hl-cyan   { background: linear-gradient(transparent 60%, var(--c-cyan-electric) 60%); padding: 0 4px; }
+
+/* Service tags */
+.tag-strategy   { background: rgba(90,0,163,0.08); color: var(--c-purple-royal); }
+.tag-frameworks { background: rgba(115,232,0,0.15); color: var(--c-green-ink); }
+.tag-resources  { background: rgba(40,183,255,0.12); color: var(--c-cyan-ink); }
+
+/* Palette context classes */
+.palette-voltage {
+  --p-60: var(--c-lilac-paper);
+  --p-30: var(--c-purple-royal);
+  --p-10: var(--c-green-voltage);
+  --p-bonus: var(--c-pink-hot);
+  --p-ink-on-60: var(--c-purple-royal);
+  --p-ink-on-30: var(--c-white);
+  --p-ink-on-10: var(--c-green-ink);
+}
+.palette-editorial {
+  --p-60: var(--c-purple-royal);
+  --p-30: var(--c-pink-blush);
+  --p-10: var(--c-pink-hot);
+  --p-ink-on-60: var(--c-white);
+  --p-ink-on-30: var(--c-purple-ink);
+  --p-ink-on-10: var(--c-white);
+}
+.palette-twilight {
+  --p-60: var(--grad-twilight);
+  --p-30: var(--c-ice-paper);
+  --p-10: var(--c-cyan-electric);
+  --p-bonus: var(--c-lemon);
+  --p-ink-on-60: var(--c-white);
+  --p-ink-on-30: var(--c-ice-ink);
+  --p-ink-on-10: var(--c-ice-ink);
+}
 
 /* ============================================================
    LAYOUT SHELL

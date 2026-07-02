@@ -13,13 +13,20 @@ import Base from '../layouts/Base.astro';
 
   <section class="meet-calendar">
     <div class="meet-calendar__inner">
-      <div class="meet-calendar__embed">
-        <span class="t-mono meet-calendar__label">embed · cal.com</span>
-        <p class="meet-calendar__note">Booking calendar — drop Cal.com or Calendly iframe here.</p>
-        <!-- <iframe src="..." ... /> -->
-      </div>
+      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
     </div>
   </section>
+
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "meetgreet", {origin:"https://cal.com"});
+    Cal.ns.meetgreet("inline", {
+      elementOrSelector:"#my-cal-inline",
+      config: {"layout":"month_view"},
+      calLink: "cheyfitz/meetgreet",
+    });
+    Cal.ns.meetgreet("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#53157a"},"dark":{"cal-brand":"#f9d648"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
 
   <section class="meet-contact">
     <div class="meet-contact__inner">
@@ -82,30 +89,6 @@ import Base from '../layouts/Base.astro';
   .meet-calendar__inner {
     max-width: var(--max-width);
     margin: 0 auto;
-  }
-
-  .meet-calendar__embed {
-    border: 1px dashed var(--c-hairline);
-    border-radius: 12px;
-    padding: 48px;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .meet-calendar__label {
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--c-muted);
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  .meet-calendar__note {
-    font-size: 15px;
-    color: var(--c-body);
-    margin: 0;
   }
 
   .meet-contact {

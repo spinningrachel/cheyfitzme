@@ -9,29 +9,17 @@ The owner can spot the generic "AI house style" from a mile off: mono ALL-CAPS e
 serif headline reflex, chip/pill rows, symmetric before/after cards, everything rounded. We deliberately
 removed those. Do not reintroduce them.
 
-## Type system v2 (see assets/fonts.css)
-- **Schibsted Grotesk is primary** — display, headings, AND body. Tight tracking, heavy weights (700–800)
-  for display. This is the single biggest change; lean on it.
-- **BioRhyme is the editorial marker voice** — uppercase section labels (the eyebrow, `.t-label`) and
-  section numerals (`.t-marker`), which pair into one "marker unit" set against the Schibsted heading.
-  Plus rare display accents (`.t-display-accent`, `.t-quote-mark`). NEVER a body face or a default
-  heading face. This is the deliberate inverse of the cliché: a sans headline with a *serif* eyebrow,
-  not a serif headline.
-- **JetBrains Mono is functional / data only** — code, routes &amp; URLs, timestamps, status tags
-  (KEEP / REPLACE), filing metadata, footnote markers. NEVER a decorative section eyebrow. (Section
-  *numerals* are BioRhyme markers now, not mono.)
-- **Eyebrows are BioRhyme UPPERCASE in a signal color** (`.t-label`) — serif caps, never mono. Pair with
-  a BioRhyme numeral (`.t-marker`) on section / part openers. Still selective: many sections need no
-  label, and the numeral is optional — present it on major divisions, drop it on minor sub-blocks.
-- **Sizes are contextual, not fixed.** Markers and labels are roles, not one px value. The numeral steps
-  with the level (cover ~56–80px · section ~32–40px · sub ~20–24px or omit); the label stays small.
-  Don't hardcode a single size system-wide.
-- **No chips / pills.** Don't use `.tag-*` pill rows or flex-wrap chip groups for nav, categories, or
-  filters. Use plain text, hairline-ruled rows, ledgers, or tables instead.
-- **Where the marker lives.** The BioRhyme marker unit (numeral + uppercase eyebrow) belongs to
-  *documents* (proposals, reviews, plans) and major section openers. The Plain marketing pages stay
-  lean — mostly label-free, with a BioRhyme eyebrow on at most a hero or two. Never serif-caps eyebrows
-  on every site section.
+## Type system v3 (design system update 2026-06-30)
+
+**The deliberate break:** this system avoids the AI design system tell (mono ALL-CAPS eyebrow + serif heading). Instead: humanist sans headings (Cabin) with italic serif eyebrows (BioRhyme), body in a confident grotesk (Schibsted).
+
+- **Cabin is headings + UI** — H1–H4, nav, buttons. Weight 700 max (Cabin's ceiling). Tight tracking on display sizes. `--font-display` and `--font-heading` both point here.
+- **Schibsted Grotesk is body copy** — lede, paragraphs, all reading text on screen. `--font-body`. Never at heading size.
+- **BioRhyme is eyebrows + decorative only** — `.t-eyebrow` / `.t-label`: 13px, italic, sentence case, signal color, 0.75 opacity. Also pull-quotes (`.t-quote`), numerals (`.t-marker`), quote marks (`.t-quote-mark`). NEVER for headings (H1–H4) — that's the pattern we're breaking.
+- **JetBrains Mono is code blocks only** — code, inline code. NEVER eyebrows or brand labels.
+- **`.t-tag`** (service chips, category pills) — JetBrains Mono 11px, UPPERCASE, letter-spacing 1px, pill border-radius. A UI element, not an eyebrow.
+- **Eyebrows are sentence case** — `.t-eyebrow` is italic BioRhyme, delicate not loud. Never uppercase, never tracked. Use sparingly — many sections need no eyebrow.
+- **No chips / pills for nav/filters.** Use plain text, hairline-ruled rows, ledgers. `.t-tag` is only for service type badges (Strategy, Frameworks, Resources).
 
 ## Two page systems
 Colors are unchanged (Voltage Green, Hot Pink, Cyan, Lemon, the purples). The split is about register:

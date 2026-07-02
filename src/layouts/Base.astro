@@ -34,6 +34,18 @@ const siteTitle = title === 'Home'
     <title>{siteTitle}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/styles/global.css" />
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="Gt-GLF6IJqpJtUqJ-QBczrnPvIBe5i_TUFSqF8B7r9Q" />
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y3GEEMEDRZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Y3GEEMEDRZ');
+    </script>
+    <!-- Senja testimonials widget -->
+    <script src="https://widget.senja.io/widget/fedd2b18-c443-4f91-b547-b6753c030625/platform.js" type="text/javascript" async></script>
   </head>
   <body class="site-wrap">
     <SiteNav />
@@ -41,5 +53,12 @@ const siteTitle = title === 'Home'
       <slot />
     </main>
     <SiteFooter />
+    <!-- Cal.com floating button -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "meetgreet", {origin:"https://app.cal.com"});
+      Cal.ns.meetgreet("floatingButton", {"calLink":"cheyfitz/meetgreet","config":{"layout":"month_view","useSlotsViewOnSmallScreen":"true"},"buttonColor":"#5A00A3","buttonTextColor":"#73E800","buttonText":"Let's Meet"});
+      Cal.ns.meetgreet("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#5A00A3"},"dark":{"cal-brand":"#73E800"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
   </body>
 </html>

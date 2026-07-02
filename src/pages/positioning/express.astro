@@ -1,0 +1,183 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="Express Services"
+  description="Fast, affordable, on your terms. Essential messaging, go-to-market materials, and technical write-ups — delivered quickly via Fiverr."
+>
+
+  <section class="page-hero">
+    <div class="inner">
+      <a href="/positioning/" class="back-link">← Amplify Your Message</a>
+      <span class="t-label">Express Services</span>
+      <h1>Fast. Affordable. On your terms.</h1>
+      <p class="lede">Need quick-turnaround product marketing or technical documentation? These express services deliver essential messaging, go-to-market materials, and concise technical write-ups — fast and fuss-free. Ideal for smaller tasks, tight deadlines, or when you just need results, quickly.</p>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="inner">
+
+      <a class="service-row" href="https://www.fiverr.com/s/jj5b5VL" target="_blank" rel="noopener">
+        <div class="service-row__head">
+          <h2 class="service-row__name">SEO Boost</h2>
+          <span class="service-row__cta">Order on Fiverr →</span>
+        </div>
+        <p class="service-row__desc">Each topic will be up to 500 words long, focusing on what's important to you and what your differentiators are. I'll deliver my best draft for you to tweak, then send a final draft quickly for you to publish.</p>
+      </a>
+
+      <a class="service-row" href="https://www.fiverr.com/rachelcheyfitz/write-beautiful-landing-product-and-service-pages-for-you" target="_blank" rel="noopener">
+        <div class="service-row__head">
+          <h2 class="service-row__name">Website Content for Conversions</h2>
+          <span class="service-row__cta">Order on Fiverr →</span>
+        </div>
+        <p class="service-row__desc">Looking to captivate your audience and boost conversions? I specialize in crafting compelling, SEO-friendly website pages that align with your brand voice and resonate with your target audience. Whether you need a homepage that shines or a product page that converts — let's create content that drives results.</p>
+      </a>
+
+      <a class="service-row" href="https://www.fiverr.com/s/pdAK0yE" target="_blank" rel="noopener">
+        <div class="service-row__head">
+          <h2 class="service-row__name">UX Microcopy</h2>
+          <span class="service-row__cta">Order on Fiverr →</span>
+        </div>
+        <p class="service-row__desc">UX writing should change based on who your customer is and what your business is all about. I'll make sure your UI content answers your users' needs and guides them to achieve their goals, while adhering to your company's tone of voice and business differentiators.</p>
+      </a>
+
+      <a class="service-row" href="https://www.fiverr.com/rachelcheyfitz/write-outstanding-tailored-technical-and-marketing-content" target="_blank" rel="noopener">
+        <div class="service-row__head">
+          <h2 class="service-row__name">Technical &amp; Product Documentation</h2>
+          <span class="service-row__cta">Order on Fiverr →</span>
+        </div>
+        <p class="service-row__desc">Need technical documentation that communicates complex ideas clearly? I create user-friendly technical and marketing documentation for SaaS, software, and tech products. Includes collaboration with designers and engineers for technical accuracy and specialized visuals.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="inner">
+      <p class="cta-note">Need something bigger? <a href="/lets-meet/">Let's meet and scope it together.</a></p>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--pad-page);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-muted-soft);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--c-ink); }
+
+  .page-hero {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--c-hairline-soft);
+  }
+
+  .page-hero .t-label {
+    display: block;
+    color: var(--c-cyan-electric);
+    margin-bottom: 16px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin: 0 0 1.25rem;
+  }
+
+  .lede {
+    font-size: 18px;
+    color: var(--c-body);
+    max-width: 60ch;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .services-section {
+    padding: 0 0 80px;
+  }
+
+  .service-row {
+    display: block;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .service-row:first-child {
+    border-top: 1px solid var(--c-hairline-soft);
+    margin-top: 56px;
+  }
+
+  .service-row__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 10px;
+  }
+
+  .service-row__name {
+    font-size: clamp(18px, 2.2vw, 24px);
+    font-weight: 700;
+    color: var(--c-ink);
+    margin: 0;
+    letter-spacing: -0.4px;
+    transition: color 0.15s;
+  }
+
+  .service-row:hover .service-row__name {
+    color: var(--c-purple-royal);
+  }
+
+  .service-row__cta {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-cyan-deep);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .service-row__desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--c-body);
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  .cta-section {
+    padding: 0 0 96px;
+    border-top: 1px solid var(--c-hairline-soft);
+    padding-top: 40px;
+  }
+
+  .cta-note {
+    font-size: 18px;
+    color: var(--c-body);
+    margin: 0;
+  }
+
+  .cta-note a {
+    color: var(--c-purple-ink);
+    font-weight: 600;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--c-cyan-electric);
+  }
+</style>

@@ -5,9 +5,10 @@ import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   post: CollectionEntry<'blog'>;
+  toc?: { slug: string; text: string; depth: number }[];
 }
 
-const { post } = Astro.props;
+const { post, toc } = Astro.props;
 const { title, description, pubDate } = post.data;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
@@ -55,6 +56,21 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="article__image" aria-hidden="true">
           <span class="article__image-label">feature image</span>
         </div>
+
+        <!-- table of contents -->
+        {toc && toc.length > 0 && (
+          <div class="article__toc">
+            <div class="article__toc-label t-label">In this piece</div>
+            <ol class="article__toc-list">
+              {toc.map((item, i) => (
+                <li class="article__toc-item">
+                  <span class="article__toc-num">{String(i + 1).padStart(2, '0')}</span>
+                  <a class="article__toc-text" href={`#${item.slug}`}>{item.text}</a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
 
         <!-- body -->
         <div class="article__body prose">
@@ -121,7 +137,7 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
   </div>
 </Base>
 
-<style>
+<style is:global>
   /* ─── ARTICLE WRAP ─────────────────────────────────── */
   .article-wrap {
     --article-max: 980px;
@@ -234,6 +250,57 @@ const allPosts = (await getCollection('blog', ({ data }) => !data.draft))
     font-size: 13px;
     color: #7fb4d8;
     font-style: italic;
+  }
+
+  /* ─── TABLE OF CONTENTS ───────────────────────────── */
+  .article__toc {
+    max-width: var(--body-max);
+    margin: 44px 0 0;
+    padding: 22px 0;
+    border-top: 1px solid var(--c-hairline);
+    border-bottom: 1px solid var(--c-hairline);
+  }
+
+  .article__toc-label {
+    color: var(--c-muted-soft);
+    margin-bottom: 18px;
+  }
+
+  .article__toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .article__toc-item {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+  }
+
+  .article__toc-num {
+    font-family: 'BioRhyme', serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--c-cyan-electric);
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .article__toc-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--c-ink);
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .article__toc-text:hover {
+    color: var(--c-purple-royal);
   }
 
   /* ─── PROSE BODY ───────────────────────────────────── */

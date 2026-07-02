@@ -9,34 +9,36 @@ import Base from '../layouts/Base.astro';
   <!-- HERO -->
   <section class="hero">
     <div class="hero__content">
-      <div class="t-label hero__eyebrow">Marketing strategist, advisor &amp; mentor</div>
+      <div class="t-label hero__eyebrow">Deep-tech category-positioning lead</div>
       <h1 class="hero__h1">Turning un-marketable technology into a defensible market position before the cash runs out.</h1>
-      <p class="hero__lede">I'm not just solving the problem in front of you. I'm fixing the reason it keeps happening — the positioning and messaging architecture underneath.</p>
+      <p class="hero__lede">25 years across cybersecurity, AI/ML, developer tools, and enterprise. Most recently founding marketer at Visual Layer through our acquisition by Camtek. Before that: Director of Marketing at Coro — 13 reports, $1M+ quarterly ACV, 300% YoY growth — and Head of PMM at Lytx, where we lifted market share by 65%. Full stack, AI-leveraged, no handoff.</p>
       <div class="hero__ctas">
         <a href="/lets-meet/" class="btn btn-voltage">Let's meet — it's free</a>
-        <a href="/core-positioning/" class="btn btn-text">See how I can help</a>
+        <a href="/portfolio/" class="btn btn-text">See my work</a>
       </div>
     </div>
-    <div class="hero__portrait" aria-hidden="true">
-      <span class="t-mono hero__portrait-label">your photo</span>
+    <div class="hero__portrait">
+      <img src="/rachel-cheyfitz.jpg" alt="Rachel Cheyfitz" class="hero__portrait-img" />
     </div>
   </section>
 
-  <!-- ROTATING TAGLINE -->
-  <section class="tagline-row">
-    <div class="tagline-row__inner">
-      <span class="tagline-row__static">I make your stuff</span>
-      <ul class="tagline-row__rotate" role="list" aria-live="polite">
-        <li class="tagline-row__item is-active">reach the right vertical</li>
-        <li class="tagline-row__item">speak to the right persona</li>
-        <li class="tagline-row__item">profitable for your partners</li>
-        <li class="tagline-row__item">impossible to ignore</li>
-      </ul>
-      <div class="tagline-row__dots" aria-hidden="true">
-        <span class="dot is-active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+  <!-- PROOF STRIP -->
+  <section class="proof">
+    <div class="proof__inner">
+      <div class="proof__grid">
+        <div class="proof__item">
+          <div class="proof__company">Visual Layer</div>
+          <div class="proof__stat">Zero to acquisition &middot; ARR &lt;$1M &rarr; $3M</div>
+          <div class="proof__context">Camtek, Nasdaq: CAMT &middot; Apr 2026</div>
+        </div>
+        <div class="proof__item">
+          <div class="proof__company">Coro Cybersecurity</div>
+          <div class="proof__stat">13 reports &middot; $1M+ quarterly ACV &middot; 300% YoY growth</div>
+        </div>
+        <div class="proof__item">
+          <div class="proof__company">Lytx / Surfsight</div>
+          <div class="proof__stat">+65% market share &middot; 300-page developer portal</div>
+        </div>
       </div>
     </div>
   </section>
@@ -44,67 +46,87 @@ import Base from '../layouts/Base.astro';
   <!-- SERVICES -->
   <section class="services">
     <div class="services__inner">
-      <h2 class="services__heading">Three ways in. Each one fixes the architecture, not just the deliverable.</h2>
+      <h2 class="services__heading">How I can help</h2>
       <div class="services__grid">
         <div class="services__col">
           <div class="services__num">01</div>
           <h3 class="services__title">Strategy &amp; Advisory</h3>
-          <p class="services__body">Positioning frameworks, GTM strategy, and the documentation infrastructure underneath them.</p>
-          <a href="/core-positioning/" class="services__link">See advisory</a>
+          <p class="services__body">Positioning frameworks, GTM strategy, and the analyst story that makes your category legible. The upstream work that determines whether everything downstream converts.</p>
+          <a href="/positioning/" class="services__link">See advisory</a>
         </div>
         <div class="services__col">
           <div class="services__num">02</div>
           <h3 class="services__title">Frameworks &amp; Positioning</h3>
-          <p class="services__body">Express engagements that get to clarity fast, without losing the depth that makes positioning stick.</p>
-          <a href="/core-positioning/#frameworks" class="services__link">See frameworks</a>
+          <p class="services__body">Express engagements that get to clarity fast — ICP definitions, messaging hierarchies, competitive positioning. Deliverables your team actually uses.</p>
+          <a href="/positioning/" class="services__link">See frameworks</a>
         </div>
         <div class="services__col">
           <div class="services__num">03</div>
           <h3 class="services__title">Resources &amp; Community</h3>
-          <p class="services__body">The PMM Stack, the Playbook, events, and free mentoring. The resources I wish I had had.</p>
+          <p class="services__body">The Marketing Leadership Stack, the Playbook, events, and free mentoring. Built for practitioners who want to think and work better.</p>
           <a href="/marketing-resources/" class="services__link">Explore</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY WORK WITH ME -->
+  <!-- HOW I WORK -->
   <section class="why">
     <div class="why__inner">
-      <div class="t-label why__eyebrow">Why work with me</div>
+      <div class="t-label why__eyebrow">How I work</div>
       <div class="why__grid">
         <div class="why__col">
-          <h3 class="why__title">Global market expertise</h3>
-          <p class="why__body">Deep tech to consumer, B2B, B2D and B2C. I have shipped in all of them.</p>
+          <h3 class="why__title">Research first</h3>
+          <p class="why__body">Market, ICP, competitive landscape — before a single word of messaging gets written. Strategy built on evidence, not instinct.</p>
         </div>
         <div class="why__col">
-          <h3 class="why__title">Scalable frameworks</h3>
-          <p class="why__body">Systems your team keeps using long after I am gone.</p>
+          <h3 class="why__title">Strategy and artifacts</h3>
+          <p class="why__body">Positioning that ships as living documents, not slide decks that age. Frameworks your team inherits and actually uses.</p>
         </div>
         <div class="why__col">
-          <h3 class="why__title">Engaging storytelling</h3>
-          <p class="why__body">Technical truth, told so people actually want to read it.</p>
+          <h3 class="why__title">AI-architected leverage</h3>
+          <p class="why__body">I build the workflows. Faster output without sacrificing the depth that makes positioning stick.</p>
         </div>
         <div class="why__col">
-          <h3 class="why__title">Knowledge sharing</h3>
-          <p class="why__body">A mentor by default. I leave teams sharper than I found them.</p>
+          <h3 class="why__title">Multi-vertical depth</h3>
+          <p class="why__body">Cybersecurity, AI/ML, developer tools, fleet tech, enterprise SaaS. Pattern recognition that single-vertical practitioners don't have.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- LOGO WALL -->
+  <!-- LOGO CAROUSEL -->
   <section class="logos">
     <div class="logos__inner">
       <div class="t-label logos__eyebrow">Customers &amp; employers</div>
-      <div class="logos__grid">
-        <!-- Replace placeholders with real SVG/img logos -->
-        <div class="logos__slot" aria-label="Coro Cybersecurity"></div>
-        <div class="logos__slot" aria-label="Lytx / Surfsight"></div>
-        <div class="logos__slot" aria-label="Snyk"></div>
-        <div class="logos__slot" aria-label="Visual Layer"></div>
-        <div class="logos__slot" aria-label="Fiverr"></div>
-        <div class="logos__slot" aria-label="Cisco"></div>
+    </div>
+    <div class="logos__track-wrap" aria-hidden="true">
+      <div class="logos__track">
+        <div class="logos__slot"><img src="/logos/surfsight.jpg" alt="Lytx / Surfsight" /></div>
+        <div class="logos__slot"><img src="/logos/snyk.png" alt="Snyk" /></div>
+        <div class="logos__slot"><img src="/logos/cisco.png" alt="Cisco" /></div>
+        <div class="logos__slot"><img src="/logos/fiverr.png" alt="Fiverr" /></div>
+        <div class="logos__slot"><img src="/logos/pentera.png" alt="Pentera" /></div>
+        <div class="logos__slot"><img src="/logos/incredibuild.jpg" alt="Incredibuild" /></div>
+        <div class="logos__slot"><img src="/logos/comeet.png" alt="Comeet" /></div>
+        <div class="logos__slot"><img src="/logos/reco.jpg" alt="Reco" /></div>
+        <div class="logos__slot"><img src="/logos/xmcyber.png" alt="XM Cyber" /></div>
+        <div class="logos__slot"><img src="/logos/lightrun.png" alt="Lightrun" /></div>
+        <div class="logos__slot"><img src="/logos/hysolate.png" alt="Hysolate" /></div>
+        <div class="logos__slot"><img src="/logos/blink.jpg" alt="Blink" /></div>
+        <!-- duplicate for seamless loop -->
+        <div class="logos__slot"><img src="/logos/surfsight.jpg" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/snyk.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/cisco.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/fiverr.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/pentera.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/incredibuild.jpg" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/comeet.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/reco.jpg" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/xmcyber.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/lightrun.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/hysolate.png" alt="" /></div>
+        <div class="logos__slot"><img src="/logos/blink.jpg" alt="" /></div>
       </div>
     </div>
   </section>
@@ -112,21 +134,15 @@ import Base from '../layouts/Base.astro';
   <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="testimonials__inner">
-      <div class="testimonials__featured">
-        <blockquote class="testimonials__quote">
-          She rebuilt our positioning in three weeks. The messaging still holds two years later.
-        </blockquote>
-        <cite class="testimonials__cite">VP Marketing, Series B SaaS</cite>
-        <div class="testimonials__secondary rule-top">
-          <p class="testimonials__secondary-quote">The clearest strategic thinker I have worked with. No fluff, all signal.</p>
-          <cite class="testimonials__secondary-cite">Founder, Dev tools</cite>
-        </div>
-      </div>
-      <div class="testimonials__embed">
-        <span class="t-mono testimonials__embed-label">embed · senja.io</span>
-        <p class="testimonials__embed-note">Senja testimonial wall — drop iframe here when account is ready.</p>
-        <!-- <iframe src="https://senja.io/p/your-widget-id" ... /> -->
-      </div>
+      <blockquote class="testimonials__quote">
+        Her confidence is uniquely needed at the right time and her passion is contagious. Rachel is a true asset to any organization — her ability to challenge the status quo is refreshing. If you want to succeed with high value returns, Rachel is who you want on your team.
+      </blockquote>
+      <cite class="testimonials__cite">Karen Torrenti — Customer First Champion, B2B SaaS</cite>
+    </div>
+    <div class="testimonials__senja">
+      <script type="text/javascript" src="https://widget.senja.io/js/iframeResizer.min.js"></script>
+      <iframe id="wall-of-love-gUuBAx4" src="https://senja.io/p/cheyfitz/gUuBAx4?hideNavigation=true&embed=true" title="Wall of Love" frameborder="0" scrolling="no" width="100%"></iframe>
+      <script type="text/javascript">document.addEventListener("DOMContentLoaded", function () { iFrameResize({ log: false, checkOrigin: false }, "#wall-of-love-gUuBAx4"); });</script>
     </div>
   </section>
 
@@ -136,7 +152,7 @@ import Base from '../layouts/Base.astro';
       <h2 class="cta-band__heading">Ready to make your product impossible to ignore?</h2>
       <div class="cta-band__actions">
         <a href="/lets-meet/" class="btn btn-voltage">Let's meet — it's free</a>
-        <a href="/get-help-free/" class="btn btn-ink">Free mentoring</a>
+        <a href="/mentor/" class="btn btn-ink">Free mentoring</a>
       </div>
     </div>
   </section>
@@ -187,12 +203,16 @@ import Base from '../layouts/Base.astro';
   .hero__portrait {
     aspect-ratio: 4/5;
     border-radius: 14px;
-    background: var(--c-surface);
+    overflow: hidden;
     border: 1px solid var(--c-hairline-soft);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 20px;
+  }
+
+  .hero__portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
   }
 
   .hero__portrait-label {
@@ -201,69 +221,70 @@ import Base from '../layouts/Base.astro';
     color: var(--c-muted-soft);
   }
 
-  /* ─── ROTATING TAGLINE ──────────────────────────────── */
-  .tagline-row {
-    padding: 0 var(--pad-page) 88px;
+  /* ─── PROOF STRIP ───────────────────────────────────── */
+  .proof {
+    border-top: 1px solid var(--c-hairline-soft);
+    border-bottom: 1px solid var(--c-hairline-soft);
+    padding: 0 var(--pad-page);
+    margin-bottom: 88px;
+  }
+
+  .proof__inner {
     max-width: var(--max-width);
     margin: 0 auto;
   }
 
-  .tagline-row__inner {
-    border-top: 1px solid var(--c-hairline-soft);
-    padding-top: 22px;
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    flex-wrap: wrap;
+  .proof__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .tagline-row__static {
-    font-size: 17px;
+  .proof__item {
+    padding: 28px 28px 28px 0;
+    border-right: 1px solid var(--c-hairline-soft);
+  }
+  .proof__item:not(:first-child) {
+    padding-left: 28px;
+  }
+  .proof__item:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .proof__company {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--c-ink);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .proof__stat {
+    font-size: 15px;
     font-weight: 600;
     color: var(--c-ink);
-    white-space: nowrap;
+    line-height: 1.35;
+    margin-bottom: 4px;
   }
 
-  .tagline-row__rotate {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: baseline;
-  }
-
-  .tagline-row__item {
-    font-size: 17px;
-    font-weight: 600;
+  .proof__context {
+    font-size: 12px;
     color: var(--c-muted-soft);
-    transition: color 0.3s;
   }
 
-  .tagline-row__item.is-active {
-    color: var(--c-ink);
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: var(--c-green-voltage);
-  }
-
-  .tagline-row__dots {
-    margin-left: auto;
-    display: flex;
-    gap: 6px;
-    align-self: center;
-  }
-
-  .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--c-hairline-soft);
-    transition: background 0.3s;
-  }
-  .dot.is-active {
-    background: var(--c-ink);
+  @media (max-width: 700px) {
+    .proof__grid {
+      grid-template-columns: 1fr;
+    }
+    .proof__item {
+      border-right: none;
+      border-bottom: 1px solid var(--c-hairline-soft);
+      padding: 20px 0;
+    }
+    .proof__item:last-child {
+      border-bottom: none;
+    }
   }
 
   /* ─── SERVICES ──────────────────────────────────────── */
@@ -379,39 +400,77 @@ import Base from '../layouts/Base.astro';
     margin: 0;
   }
 
-  /* ─── LOGO WALL ─────────────────────────────────────── */
+  /* ─── LOGO CAROUSEL ─────────────────────────────────── */
   .logos {
     background: var(--c-surface);
     border-top: 1px solid var(--c-hairline-soft);
-    padding: 56px var(--pad-page);
+    border-bottom: 1px solid var(--c-hairline-soft);
+    padding: 48px 0 52px;
   }
 
   .logos__inner {
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 0 var(--pad-page);
   }
 
   .logos__eyebrow {
     color: var(--c-muted-soft);
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
-  .logos__grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 28px 36px;
+  .logos__track-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .logos__track-wrap::before,
+  .logos__track-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .logos__track-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, var(--c-surface), transparent);
+  }
+  .logos__track-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, var(--c-surface), transparent);
+  }
+
+  .logos__track {
+    display: flex;
     align-items: center;
-    opacity: 0.55;
+    gap: 52px;
+    animation: logos-scroll 32s linear infinite;
+    width: max-content;
+  }
+  .logos__track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes logos-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 
   .logos__slot {
-    height: 18px;
-    background: var(--c-ink);
-    border-radius: 3px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .logos__slot:nth-child(2) { width: 78%; }
-  .logos__slot:nth-child(4) { width: 70%; }
-  .logos__slot:nth-child(6) { width: 84%; }
+
+  .logos__slot img {
+    height: 44px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+  }
 
   /* ─── TESTIMONIALS ──────────────────────────────────── */
   .testimonials {
@@ -421,10 +480,8 @@ import Base from '../layouts/Base.astro';
   }
 
   .testimonials__inner {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 56px;
-    align-items: start;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 
   .testimonials__quote {
@@ -434,7 +491,6 @@ import Base from '../layouts/Base.astro';
     color: var(--c-ink);
     font-weight: 500;
     margin: 0 0 24px;
-    max-width: 22ch;
   }
 
   .testimonials__cite {
@@ -443,47 +499,12 @@ import Base from '../layouts/Base.astro';
     font-style: normal;
   }
 
-  .testimonials__secondary {
-    margin-top: 36px;
-    padding-top: 24px;
-  }
-
-  .testimonials__secondary-quote {
-    font-size: 18px;
-    line-height: 1.4;
-    color: var(--c-ink);
-    margin: 0 0 10px;
-  }
-
-  .testimonials__secondary-cite {
-    font-size: 14px;
-    color: var(--c-muted-soft);
-    font-style: normal;
-  }
-
-  .testimonials__embed {
-    border: 1px dashed var(--c-hairline-soft);
-    border-radius: 12px;
-    padding: 28px;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .testimonials__embed-label {
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: var(--c-muted-soft);
-    margin-bottom: 8px;
-    display: block;
-  }
-
-  .testimonials__embed-note {
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--c-body);
-    margin: 0;
+  .testimonials__senja {
+    margin-top: 56px;
+    padding: 0 var(--pad-page);
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* ─── VOLTAGE CTA BAND ──────────────────────────────── */
@@ -537,12 +558,6 @@ import Base from '../layouts/Base.astro';
       border-bottom: 1px solid var(--c-hairline-soft);
       padding: 24px 0;
     }
-    .testimonials__inner {
-      grid-template-columns: 1fr;
-    }
-    .logos__grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
     .cta-band__inner {
       flex-direction: column;
       align-items: flex-start;
@@ -554,27 +569,9 @@ import Base from '../layouts/Base.astro';
     .why__grid {
       grid-template-columns: 1fr;
     }
-    .logos__grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
     .hero__h1 {
       letter-spacing: -2px;
     }
   }
 </style>
 
-<script>
-  const items = document.querySelectorAll<HTMLElement>('.tagline-row__item');
-  const dots = document.querySelectorAll<HTMLElement>('.dot');
-  let current = 0;
-
-  if (items.length > 1) {
-    setInterval(() => {
-      items[current].classList.remove('is-active');
-      dots[current].classList.remove('is-active');
-      current = (current + 1) % items.length;
-      items[current].classList.add('is-active');
-      dots[current].classList.add('is-active');
-    }, 2600);
-  }
-</script>

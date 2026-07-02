@@ -1,0 +1,237 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="PMM FAQ"
+  description="Questions and answers about product marketing — what it is, why it matters, and how it works in practice."
+>
+
+  <section class="page-hero">
+    <div class="inner">
+      <a href="/positioning/" class="back-link">← Amplify Your Message</a>
+      <span class="t-label">FAQ</span>
+      <h1>Questions about product marketing, answered.</h1>
+      <p class="lede">What a positioning document is, why it matters, and how it actually works — for founders, marketers, and anyone who keeps getting pulled into these conversations.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="inner">
+
+      <div class="faq-item">
+        <h2 class="faq-q">What is a positioning document?</h2>
+        <div class="faq-a">
+          <p>A positioning document is a single source of truth that defines how your company, product, or service fits into the market. It captures who you're for, what problem you solve, why you solve it better than the alternatives, and how that should be communicated — consistently, across every function.</p>
+          <p>It's not a tagline. It's not a one-liner. It's the strategic logic underneath all of those things.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2 class="faq-q">Why does it matter?</h2>
+        <div class="faq-a">
+          <p>Without a positioning document, every team answers the question "what do we do and why should you care?" differently. That inconsistency costs you in every direction: slower sales, confused buyers, harder recruiting, wasted marketing spend, and onboarding that takes months instead of weeks.</p>
+          <p>A positioning document creates <strong>Strategic Unity</strong> (everyone pulling the same direction), <strong>Message Coherence</strong> (consistent communication wherever buyers encounter you), <strong>Operational Excellence</strong> (faster execution because the brief is already written), and <strong>Market Distinction</strong> (a reason to choose you over the alternatives).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2 class="faq-q">What goes inside one?</h2>
+        <div class="faq-a">
+          <p>A complete positioning document typically covers:</p>
+          <ul>
+            <li>Ideal Customer Profile (ICP) and Ideal Partner Profile (IPP)</li>
+            <li>Buyer and user personas</li>
+            <li>Relevant verticals and segments</li>
+            <li>Company trust signals: certifications, awards, background, expertise</li>
+            <li>Brand overview and voice</li>
+            <li>Product name and category</li>
+            <li>Target customer segmentation</li>
+            <li>Compelling reasons to buy</li>
+            <li>Competitive alternatives and how you compare</li>
+            <li>Differentiated features and capabilities</li>
+            <li>Value proposition</li>
+            <li>Messaging guidance and guidelines</li>
+          </ul>
+          <p>The depth and format depend on your stage. An early-stage startup needs a different document than a Series B company preparing for a category-defining launch.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2 class="faq-q">What is the Value Proposition Canvas?</h2>
+        <div class="faq-a">
+          <p>The Value Proposition Canvas is a framework for ensuring your product actually fits your customer's needs. It has two sides:</p>
+          <p><strong>Customer Profile</strong> — what jobs your customer is trying to do, what pains they experience, and what gains they're hoping for.</p>
+          <p><strong>Value Map</strong> — what products and services you offer, which pain relievers you provide, and which gain creators you enable.</p>
+          <p><strong>Fit</strong> happens when your value map directly addresses the customer profile. Positioning work is largely the work of finding, articulating, and proving that fit.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2 class="faq-q">Who owns positioning?</h2>
+        <div class="faq-a">
+          <p>In practice: the PMM. In theory: it's a cross-functional output that needs sign-off from product, marketing, sales, and leadership. The PMM is the person who runs the process, synthesizes the inputs, writes the document, and maintains it as the company evolves.</p>
+          <p>At early-stage companies without a PMM, the founder usually owns it by default — which works until it doesn't. The positioning document is often the first thing a founding PMM inherits and the first thing they have to fix.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h2 class="faq-q">How often should it be updated?</h2>
+        <div class="faq-a">
+          <p>A positioning document should be a living document — reviewed at minimum annually, and revisited any time the market shifts significantly, a major competitor moves, you expand into a new segment, or a product pivot changes what you're actually selling.</p>
+          <p>If your positioning document was written more than 18 months ago and hasn't been touched, assume it needs work.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="inner">
+      <h2>Need a positioning document built?</h2>
+      <p>I work with founders and marketing leaders to create positioning frameworks from scratch or rebuild ones that have drifted. Start with a free conversation.</p>
+      <div class="cta-actions">
+        <a href="/lets-meet/" class="btn btn-ink">Let's meet — it's free</a>
+        <a href="/positioning/" class="btn-text">See what's included →</a>
+      </div>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--pad-page);
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--c-muted-soft);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color 0.15s;
+  }
+  .back-link:hover { color: var(--c-ink); }
+
+  .page-hero {
+    padding: 72px 0 64px;
+    border-bottom: 1px solid var(--c-hairline-soft);
+  }
+
+  .page-hero .t-label {
+    display: block;
+    color: var(--c-cyan-electric);
+    margin-bottom: 16px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: var(--c-ink);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin: 0 0 1.25rem;
+    max-width: 18ch;
+  }
+
+  .lede {
+    font-size: 18px;
+    color: var(--c-body);
+    max-width: 56ch;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .faq-section {
+    padding: 64px 0 80px;
+  }
+
+  .faq-item {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--c-hairline-soft);
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid var(--c-hairline-soft);
+  }
+
+  .faq-q {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--c-ink);
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .faq-a p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--c-body);
+    margin: 0 0 16px;
+  }
+
+  .faq-a p:last-child { margin-bottom: 0; }
+
+  .faq-a strong {
+    color: var(--c-ink);
+    font-weight: 600;
+  }
+
+  .faq-a ul {
+    margin: 12px 0 16px;
+    padding-left: 1.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .faq-a ul li {
+    font-size: 15px;
+    color: var(--c-body);
+    line-height: 1.5;
+  }
+
+  .cta-section {
+    padding: 72px 0 96px;
+    background: var(--c-surface);
+  }
+
+  .cta-section h2 {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 800;
+    color: var(--c-ink);
+    letter-spacing: -1px;
+    margin: 0 0 14px;
+  }
+
+  .cta-section p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--c-body);
+    max-width: 52ch;
+    margin: 0 0 32px;
+  }
+
+  .cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 700px) {
+    .faq-item {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>
