@@ -515,11 +515,11 @@ section {
 }
 
 
-logos__slot {
-  height: 54px;
-  width: auto;
-  max-width: 140px;
-  object-fit: contain
+.logos__slot img {
+    height: 100;
+    width: auto;
+    max-width: 240px;
+    object-fit: contain;
 }
 
 
