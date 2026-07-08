@@ -514,6 +514,15 @@ section {
   padding: var(--pad-section) 0;
 }
 
+
+logos__slot {
+  height: 54px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain
+}
+
+
 /* ============================================================
    BUTTON PRIMITIVES
    ============================================================ */
