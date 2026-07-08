@@ -1,4 +1,6 @@
 ---
+import { Menu } from 'lucide-astro';
+
 const base = import.meta.env.BASE_URL.replace(/\/*$/, "/");
 
 const navLinks = [
@@ -41,7 +43,7 @@ const currentPath = Astro.url.pathname;
     </ul>
 
     <button class="site-nav__burger" aria-label="Open menu" aria-expanded="false">
-      <img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}icons/menu.svg`} alt="" width="20" height="20" aria-hidden="true" />
+      <Menu size={20} aria-hidden="true" />
     </button>
   </nav>
 </header>
