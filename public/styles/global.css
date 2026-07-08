@@ -515,15 +515,6 @@ section {
 }
 
 
-.logos__slot .img {
-    height: 100px;
-    width: auto;
-    max-width: 240px;
-    object-fit: contain;
-    border-radius: 15px;
-}
-
-
 /* ============================================================
    BUTTON PRIMITIVES
    ============================================================ */
