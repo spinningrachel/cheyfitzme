@@ -13,12 +13,12 @@ import Base from '../layouts/Base.astro';
       <h1 class="hero__h1">Turning un-marketable technology into a defensible market position before the cash runs out.</h1>
       <p class="hero__lede">25 years across cybersecurity, AI/ML, developer tools, and enterprise. Most recently founding marketer at Visual Layer through our acquisition by Camtek. Before that: Director of Marketing at Coro — 13 reports, $1M+ quarterly ACV, 300% YoY growth — and Head of PMM at Lytx, where we lifted market share by 65%. Full stack, AI-leveraged, no handoff.</p>
       <div class="hero__ctas">
-        <a href="/lets-meet/" class="btn btn-voltage">Let's meet — it's free</a>
-        <a href="/portfolio/" class="btn btn-text">See my work</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`} class="btn btn-voltage">Let's meet — it's free</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}portfolio/`} class="btn btn-text">See my work</a>
       </div>
     </div>
     <div class="hero__portrait">
-      <img src="/rachel-cheyfitz.jpg" alt="Rachel Cheyfitz" class="hero__portrait-img" />
+      <img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}rachel-cheyfitz.jpg`} alt="Rachel Cheyfitz" class="hero__portrait-img" />
     </div>
   </section>
 
@@ -52,19 +52,19 @@ import Base from '../layouts/Base.astro';
           <div class="services__num">01</div>
           <h3 class="services__title">Strategy &amp; Advisory</h3>
           <p class="services__body">Positioning frameworks, GTM strategy, and the analyst story that makes your category legible. The upstream work that determines whether everything downstream converts.</p>
-          <a href="/positioning/" class="services__link">See advisory</a>
+          <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}positioning/`} class="services__link">See advisory</a>
         </div>
         <div class="services__col">
           <div class="services__num">02</div>
           <h3 class="services__title">Frameworks &amp; Positioning</h3>
           <p class="services__body">Express engagements that get to clarity fast — ICP definitions, messaging hierarchies, competitive positioning. Deliverables your team actually uses.</p>
-          <a href="/positioning/" class="services__link">See frameworks</a>
+          <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}positioning/`} class="services__link">See frameworks</a>
         </div>
         <div class="services__col">
           <div class="services__num">03</div>
           <h3 class="services__title">Resources &amp; Community</h3>
           <p class="services__body">The Marketing Leadership Stack, the Playbook, events, and free mentoring. Built for practitioners who want to think and work better.</p>
-          <a href="/marketing-resources/" class="services__link">Explore</a>
+          <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}marketing-resources/`} class="services__link">Explore</a>
         </div>
       </div>
     </div>
@@ -102,31 +102,31 @@ import Base from '../layouts/Base.astro';
     </div>
     <div class="logos__track-wrap" aria-hidden="true">
       <div class="logos__track">
-        <div class="logos__slot"><img src="/logos/surfsight.jpg" alt="Lytx / Surfsight" /></div>
-        <div class="logos__slot"><img src="/logos/snyk.png" alt="Snyk" /></div>
-        <div class="logos__slot"><img src="/logos/cisco.png" alt="Cisco" /></div>
-        <div class="logos__slot"><img src="/logos/fiverr.png" alt="Fiverr" /></div>
-        <div class="logos__slot"><img src="/logos/pentera.png" alt="Pentera" /></div>
-        <div class="logos__slot"><img src="/logos/incredibuild.jpg" alt="Incredibuild" /></div>
-        <div class="logos__slot"><img src="/logos/comeet.png" alt="Comeet" /></div>
-        <div class="logos__slot"><img src="/logos/reco.jpg" alt="Reco" /></div>
-        <div class="logos__slot"><img src="/logos/xmcyber.png" alt="XM Cyber" /></div>
-        <div class="logos__slot"><img src="/logos/lightrun.png" alt="Lightrun" /></div>
-        <div class="logos__slot"><img src="/logos/hysolate.png" alt="Hysolate" /></div>
-        <div class="logos__slot"><img src="/logos/blink.jpg" alt="Blink" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/surfsight.jpg`} alt="Lytx / Surfsight" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/snyk.png`} alt="Snyk" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/cisco.png`} alt="Cisco" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/fiverr.png`} alt="Fiverr" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/pentera.png`} alt="Pentera" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/incredibuild.jpg`} alt="Incredibuild" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/comeet.png`} alt="Comeet" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/reco.jpg`} alt="Reco" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/xmcyber.png`} alt="XM Cyber" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/lightrun.png`} alt="Lightrun" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/hysolate.png`} alt="Hysolate" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/blink.jpg`} alt="Blink" /></div>
         <!-- duplicate for seamless loop -->
-        <div class="logos__slot"><img src="/logos/surfsight.jpg" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/snyk.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/cisco.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/fiverr.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/pentera.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/incredibuild.jpg" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/comeet.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/reco.jpg" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/xmcyber.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/lightrun.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/hysolate.png" alt="" /></div>
-        <div class="logos__slot"><img src="/logos/blink.jpg" alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/surfsight.jpg`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/snyk.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/cisco.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/fiverr.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/pentera.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/incredibuild.jpg`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/comeet.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/reco.jpg`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/xmcyber.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/lightrun.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/hysolate.png`} alt="" /></div>
+        <div class="logos__slot"><img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/blink.jpg`} alt="" /></div>
       </div>
     </div>
   </section>
@@ -151,8 +151,8 @@ import Base from '../layouts/Base.astro';
     <div class="cta-band__inner">
       <h2 class="cta-band__heading">Ready to make your product impossible to ignore?</h2>
       <div class="cta-band__actions">
-        <a href="/lets-meet/" class="btn btn-voltage">Let's meet — it's free</a>
-        <a href="/mentor/" class="btn btn-ink">Free mentoring</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`} class="btn btn-voltage">Let's meet — it's free</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}mentor/`} class="btn btn-ink">Free mentoring</a>
       </div>
     </div>
   </section>

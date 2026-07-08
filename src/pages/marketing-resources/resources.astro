@@ -9,7 +9,7 @@ import Base from '../../layouts/Base.astro';
 
   <section class="page-hero">
     <div class="inner">
-      <a href="/marketing-resources/" class="back-link">← Marketing Resources</a>
+      <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}marketing-resources/`} class="back-link">← Marketing Resources</a>
       <span class="t-label">Resources I Recommend</span>
       <h1>Couldn't find it here? Try these.</h1>
       <p class="lede">A curated list of the resources I point people to for product marketing, content marketing, and technical writing. I don't own these — I just think they're genuinely good.</p>
@@ -42,7 +42,7 @@ import Base from '../../layouts/Base.astro';
     <div class="inner">
       <h2>Know something I should add?</h2>
       <p>If there's a resource you think belongs here — a community, a newsletter, a framework, a tool — I'm open to hearing about it. Reach out.</p>
-      <a href="/contact/" class="btn btn-ink">Get in touch</a>
+      <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}contact/`} class="btn btn-ink">Get in touch</a>
     </div>
   </section>
 

@@ -9,7 +9,7 @@ import Base from '../../layouts/Base.astro';
 
   <section class="page-hero">
     <div class="inner">
-      <a href="/positioning/" class="back-link">← Amplify Your Message</a>
+      <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}positioning/`} class="back-link">← Amplify Your Message</a>
       <span class="t-label">FAQ</span>
       <h1>Questions about product marketing, answered.</h1>
       <p class="lede">What a positioning document is, why it matters, and how it actually works — for founders, marketers, and anyone who keeps getting pulled into these conversations.</p>
@@ -91,8 +91,8 @@ import Base from '../../layouts/Base.astro';
       <h2>Need a positioning document built?</h2>
       <p>I work with founders and marketing leaders to create positioning frameworks from scratch or rebuild ones that have drifted. Start with a free conversation.</p>
       <div class="cta-actions">
-        <a href="/lets-meet/" class="btn btn-ink">Let's meet — it's free</a>
-        <a href="/positioning/" class="btn-text">See what's included →</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`} class="btn btn-ink">Let's meet — it's free</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}positioning/`} class="btn-text">See what's included →</a>
       </div>
     </div>
   </section>

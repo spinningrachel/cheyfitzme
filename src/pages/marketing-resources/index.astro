@@ -20,7 +20,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <section class="resources-grid">
     <div class="resources-grid__inner">
 
-      <a href="/blog/" class="resources-block">
+      <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}blog/`} class="resources-block">
         <div class="resources-block__num t-mono">01</div>
         <h2 class="resources-block__title">PMM Playbook: The Blog</h2>
         <p class="resources-block__body">Positioning, GTM, documentation, PLG, and hiring — written from inside the work, not above it.</p>
@@ -78,7 +78,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
         <div class="resources-block__num t-mono">04</div>
         <h2 class="resources-block__title">Free Mentoring</h2>
         <p class="resources-block__body">For product marketers and technical writers who need honest feedback and no agenda. No time limit. We start with one meeting and take it from there.</p>
-        <a href="/get-help-free/" class="btn btn-voltage resources-block__cta">Learn more</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}get-help-free/`} class="btn btn-voltage resources-block__cta">Learn more</a>
       </div>
 
     </div>

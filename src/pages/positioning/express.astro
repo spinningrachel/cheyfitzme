@@ -9,7 +9,7 @@ import Base from '../../layouts/Base.astro';
 
   <section class="page-hero">
     <div class="inner">
-      <a href="/positioning/" class="back-link">← Amplify Your Message</a>
+      <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}positioning/`} class="back-link">← Amplify Your Message</a>
       <span class="t-label">Express Services</span>
       <h1>Fast. Affordable. On your terms.</h1>
       <p class="lede">Need quick-turnaround product marketing or technical documentation? These express services deliver essential messaging, go-to-market materials, and concise technical write-ups — fast and fuss-free. Ideal for smaller tasks, tight deadlines, or when you just need results, quickly.</p>
@@ -56,7 +56,7 @@ import Base from '../../layouts/Base.astro';
 
   <section class="cta-section">
     <div class="inner">
-      <p class="cta-note">Need something bigger? <a href="/lets-meet/">Let's meet and scope it together.</a></p>
+      <p class="cta-note">Need something bigger? <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`}>Let's meet and scope it together.</a></p>
     </div>
   </section>
 

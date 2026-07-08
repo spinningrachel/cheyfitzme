@@ -1,9 +1,11 @@
 ---
+const base = import.meta.env.BASE_URL.replace(/\/*$/, "/");
+
 const navLinks = [
-  { label: 'Work',      href: '/portfolio/' },
-  { label: 'Services',  href: '/positioning/' },
-  { label: 'Writing',   href: '/blog/' },
-  { label: 'Mentoring', href: '/mentor/' },
+  { label: 'Work',      href: `${base}portfolio/` },
+  { label: 'Services',  href: `${base}positioning/` },
+  { label: 'Writing',   href: `${base}blog/` },
+  { label: 'Mentoring', href: `${base}mentor/` },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -11,9 +13,9 @@ const currentPath = Astro.url.pathname;
 
 <header class="site-nav">
   <nav class="site-nav__inner">
-    <a href="/" class="site-nav__logo" aria-label="Rachel Cheyfitz — home">
+    <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}`} class="site-nav__logo" aria-label="Rachel Cheyfitz — home">
       <img
-        src="/logos/cheyfitz-logo-lockup-horizontal.svg"
+        src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}logos/cheyfitz-logo-lockup-horizontal.svg`}
         alt="Rachel Cheyfitz"
         height="26"
         width="auto"
@@ -32,14 +34,14 @@ const currentPath = Astro.url.pathname;
         </li>
       ))}
       <li>
-        <a href="/lets-meet/" class="btn btn-ink site-nav__cta">
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`} class="btn btn-ink site-nav__cta">
           Let's meet
         </a>
       </li>
     </ul>
 
     <button class="site-nav__burger" aria-label="Open menu" aria-expanded="false">
-      <img src="/icons/menu.svg" alt="" width="20" height="20" aria-hidden="true" />
+      <img src={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}icons/menu.svg`} alt="" width="20" height="20" aria-hidden="true" />
     </button>
   </nav>
 </header>

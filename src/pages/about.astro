@@ -19,7 +19,7 @@ import Base from '../layouts/Base.astro';
 
       <div class="cta-row">
         <a href="https://app.enhancv.com/share/50e871a8/" target="_blank" rel="noopener" class="btn btn-ink">View Full CV</a>
-        <a href="/lets-meet/" class="btn btn-voltage">Let's meet</a>
+        <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`} class="btn btn-voltage">Let's meet</a>
       </div>
     </div>
   </section>

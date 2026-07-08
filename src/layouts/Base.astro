@@ -32,8 +32,8 @@ const siteTitle = title === 'Home'
     <meta property="og:image" content={ogImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <title>{siteTitle}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}favicon.svg`} />
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}styles/global.css`} />
     <!-- Google Search Console -->
     <meta name="google-site-verification" content="Gt-GLF6IJqpJtUqJ-QBczrnPvIBe5i_TUFSqF8B7r9Q" />
     <!-- Google Analytics -->
