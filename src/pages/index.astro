@@ -4,14 +4,14 @@ import Base from '../layouts/Base.astro';
 
 <Base
   title="Home"
-  description="Deep-tech category-positioning lead. Turning un-marketable technology into a defensible market position before the cash runs out."
+  description="Deep-tech category-positioning lead. Fractional CMO. In-house leadership. Marketing strategy. Go to market and make a splash. Full stack, AI-First, Product Marketing-first, Your CMO."
 >
   <!-- HERO -->
   <section class="hero">
     <div class="hero__content">
-      <div class="t-label hero__eyebrow">Deep-tech category-positioning lead</div>
-      <h1 class="hero__h1">Turning un-marketable technology into a defensible market position before the cash runs out.</h1>
-      <p class="hero__lede">25 years across cybersecurity, AI/ML, developer tools, and enterprise. Full stack, AI-First, Product Marketing-first, Your CMO.</p>
+      <div class="t-label hero__eyebrow">PMF, ICP Discovery, Audience Research, Positioning & Messaging</div>
+      <h1 class="hero__h1">Go to market with a splash</h1>
+      <p class="hero__lede">15+ years across cybersecurity, AI/ML-driven platforms, foundation models, developer marketing, and enterprise. </p>
       <div class="hero__ctas">
         <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}lets-meet/`} class="btn btn-voltage">Let's meet — it's free</a>
         <a href={`${import.meta.env.BASE_URL.replace(/\/*$/, "/")}portfolio/`} class="btn btn-text">See my work</a>
@@ -27,17 +27,15 @@ import Base from '../layouts/Base.astro';
     <div class="proof__inner">
       <div class="proof__grid">
         <div class="proof__item">
-          <div class="proof__company">Visual Layer</div>
           <div class="proof__stat">Zero to acquisition &middot; ARR &lt;$1M &rarr; $3M</div>
-          <div class="proof__context">Camtek, Nasdaq: CAMT &middot; Apr 2026</div>
+          <div class="proof__stat">Apr 2026</div>
         </div>
         <div class="proof__item">
-          <div class="proof__company">Coro Cybersecurity</div>
           <div class="proof__stat">13 reports &middot; $1M+ quarterly ACV &middot; 300% YoY growth</div>
         </div>
         <div class="proof__item">
-          <div class="proof__company">Lytx / Surfsight</div>
-          <div class="proof__stat">+65% market share &middot; 300-page developer portal</div>
+          <div class="proof__stat">+65% market share</div>
+          <div class="proof__stat">300-page developer portal</div>
         </div>
       </div>
     </div>
@@ -233,7 +231,7 @@ import Base from '../layouts/Base.astro';
     border-bottom: 1px solid var(--c-hairline-soft);
     padding: 0 var(--pad-page);
     margin-bottom: 88px;
-  }
+    
 
   .proof__inner {
     max-width: var(--max-width);
@@ -257,17 +255,11 @@ import Base from '../layouts/Base.astro';
     padding-right: 0;
   }
 
-  .proof__company {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: var(--c-ink);
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
+ 
 
   .proof__stat {
-    font-size: 15px;
+    font-family: 'BioRhyme', serif;
+    font-size: 17px;
     font-weight: 600;
     color: var(--c-ink);
     line-height: 1.35;
@@ -275,7 +267,8 @@ import Base from '../layouts/Base.astro';
   }
 
   .proof__context {
-    font-size: 12px;
+    font-family: 'BioRhyme', serif;
+    font-size: 14px;
     color: var(--c-muted-soft);
   }
 
@@ -484,20 +477,24 @@ import Base from '../layouts/Base.astro';
     padding: 88px var(--pad-page);
     max-width: var(--max-width);
     margin: 0 auto;
+    
   }
 
   .testimonials__inner {
     max-width: var(--max-width);
     margin: 0 auto;
+    background: white;
   }
 
+  
   .testimonials__quote {
-    font-size: clamp(22px, 2.5vw, 32px);
+    font-size: 22px;
     line-height: 1.25;
     letter-spacing: -1px;
     color: var(--c-ink);
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0 24px;
+   font-style: italic;
   }
 
   .testimonials__cite {
@@ -509,9 +506,10 @@ import Base from '../layouts/Base.astro';
   .testimonials__senja {
     margin-top: 56px;
     padding: 0 var(--pad-page);
-    max-width: var(--max-width);
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    background: black;
   }
 
   /* ─── VOLTAGE CTA BAND ──────────────────────────────── */
